@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/details_fl.css">
+    <link rel="stylesheet" href="css/fontSetting.css">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <ul class="pager navbar-left">
+                <li class="previous"><a href="index_sort.html"><span aria-hidden="true">&larr;</span></a></li>
+            </ul>
+            <h3 class="navbar-text navbar-title"><strong></strong></h3>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="sortShopList" class="row"></div>
+        <hr>
+        <p class="footer">到底了</p>
+    </div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="js/get_url.js"></script>
+<script src="js/por.js"></script>
+<script src="js/getShop.js"></script>
+<script>
+    $(function () {
+        let url = $.getUrlParam("fl");
+        let CategoryId = $.getUrlParam("shopCategoryId");
+        $("h3 strong").text(url);
+        
+    	getShop(1,99,null,CategoryId);
+        
+        $(".row > div").click(function () {
+            let nub = $(this > 'p').eq(1).text();
+            console.log(nub);
+        });
+    });
+</script>
+</body>
+</html>

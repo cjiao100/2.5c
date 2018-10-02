@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/char.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="pager navbar-left">
+            <li class="previous"><a href="index_chat.html"><span aria-hidden="true">&larr;</span></a></li>
+        </ul>
+        <h3 id="acceptName" class="navbar-text navbar-title"><strong>XXX</strong></h3>
+    </div>
+</nav>
+<div id="area" class="container-fluid">
+    <ul id="char-window" class="list-group">
+        <!--<li class="list-group-item">
+            <div class="left messages clearfix  ">
+                <div class="header-img pull-left"></div>
+                <div class="send pull-left">
+                    <p>
+                        <span>poiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewq</span>
+                    </p>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="right messages clearfix">
+                <div class="header-img pull-right"></div>
+                <div class="send pull-right">
+                    <p>
+                        <span>poiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewqpoiuytrewq</span>
+                    </p>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+        </li>-->
+    </ul>
+</div>
+<div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <form class="navbar-form pull-left" action="">
+        <label for="chat" class="sr-only"></label>
+        <div class="form-group">
+            <input id="chat" type="text" class="form-control">
+        </div>
+    </form>
+    <button id="send" class="btn btn-primary navbar-btn">发送</button>
+</div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script type="text/javascript" src="dist/stomp.js" ></script>
+<script type="text/javascript" src="dist/sockjs.js" ></script>
+<script type="text/javascript" src="js/por.js"></script>
+<script type="text/javascript" src="js/get_url.js"></script>
+<script src="js/chat.js"></script>
+<script>
+    /*$(function () {
+       $("#send").click(function () {
+           $("#char-window").animate({scrollTop: $("#char-window").height()}, 0);
+           let c = $("#chat").val();
+           if (c){
+               let myMes = $('<li class="list-group-item">\n' +
+                   '            <div class="right messages clearfix">\n' +
+                   '                <div class="header-img pull-right"></div>\n' +
+                   '                <div class="send pull-right">\n' +
+                   '                    <p>\n' +
+                   '                        <span>'+c+'</span>\n' +
+                   '                    </p>\n' +
+                   '                    <div class="arrow"></div>\n' +
+                   '                </div>\n' +
+                   '            </div>\n' +
+                   '        </li>'
+               );
+               $("#char-window").append(myMes);
+               $("#chat").val("");
+           }
+       });*/
+
+       $(".left > .header-img").click(function () {
+           window.location.href = "friends-index.html"
+       });
+</script>
+</body>
+</html>

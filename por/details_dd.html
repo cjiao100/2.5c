@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/details_dd.css">
+    <link rel="stylesheet" type="text/css" href="css/fontSetting.css"/>
+</head>
+<body>
+<!--
+    标题：购物详细
+    分标签：购物车，购买记录，物流详情
+    购物车：商品图片，商品介绍，价格，删除，选择，最下方的总计
+    总计：价格和，立即购买
+    购买记录：商品图片，购买时间
+    物流详细：商品图片，物流情况，物流更新时间
+    详细：商品图片，商品介绍，详细物流信息，预计多久送达，快递公司
+-->
+    <div class="gwxx">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <ul class="pager navbar-left">
+                    <li class="previous"><a href="index_my.html"><span aria-hidden="true">&larr;</span></a></li>
+                </ul>
+                <h3 class="navbar-text navbar-title"><strong>购物详细</strong></h3>
+            </div>
+            <div aria-label="Page navigation" class="fy">
+                <ul class="pagination">
+                    <li class="col-xs-4"><a href="#">购物车</a></li>
+                    <li class="col-xs-4"><a href="#">购买记录</a></li>
+                    <li class="col-xs-4"><a href="#">物流详情</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="gw" class="gwc container">
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
+                </div>
+                <div class="mes media-body">
+                    <p class="media-heading"><strong>这是一个商品</strong></p>
+                    <p class="small">不存在的规格</p>
+                    <div class="pay">
+                        <span data-name="56.00">￥ 56.00</span>
+                        <label class="sr-only" for="sb1">选择商品</label>
+                        <div class="input">
+                            <input id="sb1" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
+                </div>
+                <div class="mes media-body">
+                    <p class="media-heading"><strong>这是一个商品</strong></p>
+                    <p class="small">不存在的规格</p>
+                    <div class="pay">
+                        <span data-name="1002.00">￥ 1002.00</span>
+                        <label class="sr-only" for="sb2">选择商品</label>
+                        <div class="input">
+                            <input id="sb2" type="checkbox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-default navbar-fixed-bottom navbar-footer">
+                <div class="navbar-footer-div navbar-right">
+                    <span>总计：</span>
+                    <span id="total-price">￥ 0</span>
+                    <button id="settle" class="btn">结算</button>
+                </div>
+            </div>
+        </div>
+        <div id="gm" class="gmjl container">
+            <div class="mon">
+                <div class="page-header">
+                    <p>2018-07</p>
+                </div>
+                <div class="sp">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                </div>
+            </div>
+            <div class="mon">
+                <div class="page-header">
+                    <p>2018-06</p>
+                </div>
+                <div class="sp">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                </div>
+            </div>
+            <div class="mon">
+                <div class="page-header">
+                    <p>2018-05</p>
+                </div>
+                <div class="sp">
+                    <img src="img/header.svg" alt="">
+                    <img src="img/header.svg" alt="">
+                </div>
+            </div>
+
+        </div>
+        <div id="wl" class="wlxx container">
+            <div class="wl-media media">
+                <div class="media-left media-middle">
+                    <img src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
+                </div>
+                <div class="media-body">
+                    <p class="sp-title media-heading"><strong>这是一个商品</strong></p>
+                    <div class="sp-wl">
+                        <p class="small font_setting">从北京发出，准备发往太原转运中心</p>
+                    </div>
+                    <p class="small">2018-8-6 22:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="wl">
+        <nav class="navbar navbar-static-top navbar-default">
+            <div class="container">
+                <ul class="black pager navbar-left">
+                    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                </ul>
+                <h3 class="navbar-text navbar-title"><strong>物流</strong></h3>
+            </div>
+        </nav>
+        <div>
+            <div class="media">
+                <div class="media-left media-middle">
+                    <img src="img/header.svg" alt="">
+                </div>
+                <div class="media-body">
+                    <div class="media-heading"><strong>这是一个商品</strong></div>
+                    <div class="small">不存在的规格</div>
+                    <div class="pay">
+                        <span>价格</span>
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script src="js/Ajax.js"></script>
+<script>
+	'use strict';
+    $(function () {
+        $(".pagination li").click(function () {
+            let lix = $(this).index();
+            $(".gwxx > div").eq(lix).show().siblings("div").hide();
+        });
+        $(".wl-media").click(function () {
+            $(".gwxx").hide();
+            $(".wl").show();
+        });
+        $(".black").click(function () {
+            $(".gwxx").show();
+            $(".wl").hide();
+        });
+
+
+        let $checked = $(".input input:checked");
+
+        $(".input input:checkbox").click(function () {
+            $checked = $(".input input:checked");
+            let prices = 0;
+            $checked.each(function (index, element) {
+                let price = parseInt($(element).parent().prevAll("span").data("name"));
+                prices = prices + price;
+            });
+            $("#total-price").text("￥ " + prices);
+            if($checked.length !== 0){
+                $("#settle").removeAttr("disabled");
+            }
+        });
+        $("#settle").click(function () {
+            let price = parseInt($("#total-price").text().substr(1));
+            window.location.href = 'details_zf.html?' + price;
+        });
+    });
+</script>
+</body>
+</html>

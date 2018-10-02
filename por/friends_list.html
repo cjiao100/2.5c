@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/friends_list.css">
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <ul class="pager navbar-left">
+            <li class="previous"><a href="index_my.html"><span aria-hidden="true">&larr;</span></a></li>
+        </ul>
+        <h3 class="navbar-text navbar-title"><strong>我的好友</strong></h3>
+    </div>
+</nav>
+<div>
+    <ul class="list-group">
+        <li class="list-group-item">
+            <img src="img/header/h1.jpg" class="img-circle" alt="">
+            <span>luse</span>
+        </li>
+        <li class="list-group-item">
+            <img src="img/header/h2.jpg" class="img-circle" alt="">
+            <span>lis</span>
+        </li>
+        <li class="list-group-item">
+            <img src="img/header/h3.jpg" class="img-circle" alt="">
+            <span>helan</span>
+        </li>
+        <li class="list-group-item">
+            <img src="img/header/h4.jpg" class="img-circle" alt="">
+            <span>ailen</span>
+         </li>
+        <li class="list-group-item">
+            <img src="img/header/h5.png" class="img-circle" alt="">
+            <span>feisi</span>
+        </li>
+    </ul>
+</div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script type="text/javascript">
+	'use strict';
+	$(function () {
+		$(".list-group-item").click(function () {
+			window.location.href = "friends-index.html";
+		});
+	})
+</script>
+</body>
+</html>

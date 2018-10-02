@@ -1,0 +1,232 @@
+html,body{
+    height:100%;
+    width:100%;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+    /*font-size: 20px;*/
+}
+button, input{
+    outline: none;
+}
+.commodity_zs{
+    background: #eeeeee;
+    height:100%;
+    width:100%;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+.navbar, .jumbotron{
+    margin: 0 !important;
+}
+.nav_bar{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 0;
+    width: 100%;
+    padding: 0 10px;
+    z-index: 15;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.4);
+    padding: 0;
+    text-align: center;
+    color: #fff;
+}
+.commodity_img{
+    padding: 0;
+    z-index: 10;
+}
+.neirong{
+    background: white;
+}
+.neirong > p{
+    font-size: 20px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+.neirong > p:nth-child(2){
+    font-size: 15px;
+}
+.table-responsive, table, tr, td{
+    border: 0 !important;
+    text-align: center;
+}
+td:nth-child(1), td:nth-child(3){
+    color: #d1d1d1;
+}
+td:nth-child(2){
+    margin-left: 5px;
+    text-align: left;
+}
+.comment_area{
+    margin-top: 10px;
+    width: 100%;
+    background: white;
+    padding: 5px 10px;
+}
+.comment_area > .comment_headr{
+    height: 20px;
+    line-height: 20px;
+}
+.comment > p:nth-child(1){
+    margin-bottom: 3px;
+    /*color: #f57a00;*/
+    font-size: 13px;
+}
+.spxq{
+    padding: 10px;
+    text-align: center;
+    color: #999;
+}
+.infor{
+    padding: 0;
+}
+.dd{
+    margin-bottom: 50px;
+    padding: 10px;
+    text-align: center;
+    color: #999;
+}
+
+.sp_img{
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0;
+}
+.comment-page{
+    background-color: #eee;
+    display: none;
+}
+.comment-neirong{
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.text-color{
+	color: #ff4116;
+}
+.comment-neirong > p:nth-child(1){
+    font-size: 14px;
+}
+.comment-neirong > p:nth-child(2){
+    font-size: 10px;
+    color: #999;
+}
+.comment-neirong > p:nth-child(4){
+    height: 25px;
+    margin-bottom: 0;
+    padding: 3px;
+}
+.comment-neirong > p:nth-child(4) > span{
+    font-size: 10px;
+    color: #999;
+    float: right;
+}
+.comment-neirong > p:nth-child(4) > span > button{
+    border: 1px solid #888;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.sp_footer{
+    /*display: none;*/
+    background: white;
+    width: 100%;
+    height: 50px;
+    border-top: 1px solid #eee;
+    line-height: 50px;
+    box-sizing: border-box;
+    /*position: relative;*/
+}
+.sp_footer > a{
+    padding: 0;
+    color: #999;
+    text-align: center;
+}
+.sp_footer > .btn-group{
+	float: right;
+    /*position: absolute;
+    top: 50%;
+    transform: translateY(-50%);*/
+    padding: 0;
+}
+.sp_footer > .btn-group > .btn{
+    border: none;
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    padding: 15px;
+    width: 50%;
+    height: 50px;
+    border-radius: 0;
+}
+.sp_footer > .btn-group > .btn:nth-child(2){
+    background: #ff9500;
+}
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){
+    background: #ff0036;
+}
+.other{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.other > div{
+    background: #fff;
+    border-radius: 50px;
+    width: 75%;
+    height: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+.other > div > button{
+    width: 70%;
+    height: 15%;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    right: 50%;
+    bottom: 10%;
+    transform: translateX(50%);
+}
+.other > div > h4{
+    text-align: center;
+}
+.other > div > ul{
+    /*margin-top: 10px;*/
+}
+#size .list-group-item{
+    display: inline-block;
+    border-radius: 20px;
+    width: 45%;
+    margin: 10px 0 10px 2.5%;
+    text-align: center;
+    padding: 10px;
+}
+.table-bordered {
+    border: 1px solid #ddd !important;
+}
+#argument tr{
+    line-height: 35px;
+    /*color: #000;*/
+}
+#argument td:nth-child(1) {
+    color: #000;
+}

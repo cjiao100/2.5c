@@ -1,0 +1,78 @@
+body{
+    padding-top: 60px;
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.navbar-form{
+    border: none;
+    margin: 0;
+}
+.navbar-default{
+	background: #db1a1d;
+}
+.form-group{
+    width: 100%;
+}
+.form-group input{
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 8px;
+}
+input:active, input:focus{
+    outline: none;
+}
+
+/*文章*/
+.posts{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fff;
+}
+.posts > .post{
+    width: 100%;
+    height: 190px;
+}
+.tswz_img{
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+    padding: 10px 10px 0;
+}
+.tswz_img > img{
+    width: 100%;
+}
+.tswz_ty{
+    padding: 0 10px 10px;
+    height: 60px;
+}
+.tswz_ty > div{
+    background-color: #F8F8F8;
+    height: 100%;
+}
+.tswz_ty > div > p{
+    font-size: medium;
+}
+
+.media{
+	background: rgb(248,248,248);
+	padding: 5px;
+}
+.media-heading{
+	font-size: 15px;
+}
+.media-middle img{
+	width: 80px;
+}
+.media-left{
+	padding-right: 20px;
+}
+.media-body{
+	padding: 5px 0;
+}
+.media-body p{
+	line-height: 20px;
+	height: 40px;
+	margin-bottom: 5px;
+}

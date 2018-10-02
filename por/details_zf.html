@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/details_zf.css">
+</head>
+<body>
+<!--确认订单-->
+    <div class="qudd">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <ul class="pager navbar-left">
+                    <li id="address" class="previous"><a id="back"><span aria-hidden="true">&larr;</span></a></li>
+                </ul>
+                <h3 class="navbar-text navbar-title"><strong>确认订单</strong></h3>
+            </div>
+        </nav>
+        <div class="container">
+            <!--收货地址-->
+            <div class="address">
+                <p id="temp"><strong>选择您的收货地址</strong></p>
+                <a class="address-management" href=""><span class="glyphicon glyphicon-chevron-right"></span></a>
+            </div>
+            <!--购买的商品-->
+            <div class="panel panel-default">
+                <div class="panel-heading media">
+                    <div class="media-left media-middle">
+                        <img src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
+                    </div>
+                    <div class="media-body">
+                        <p class="media-heading"><strong>这是一个商品</strong></p>
+                        <p class="small">不存在的规格</p>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <p>XXX商品<small class="quantity">x1</small><strong class="small pull-right">￥ 20</strong></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="navbar navbar-default navbar-fixed-bottom navbar-footer">
+            <div class="navbar-footer-div navbar-right">
+                <span>总计：</span>
+                <span id="total-price">￥ 60</span>
+                <button id="pay" class="btn">立即支付</button>
+            </div>
+        </div>
+    </div>
+    <div class="zzzf">
+        <h2>正在支付</h2>
+        <h1 id="z-price">60.00</h1>
+    </div>
+    <div class="modal fade pay-success" id="success" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p>支付成功</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="bleak" type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script>
+	'use strict';
+    $(function () {
+        $("#pay").click(function () {
+            $(".zzzf").show();
+            $(".qudd").hide();
+            setTimeout(function () {
+                $("#success").modal("toggle");
+            }, 5000);
+        });
+        let u = window.location.search.substr(1);
+        $("#total-price").text('￥ ' + u);
+        $("#z-price").text('￥ ' + u);
+        $("#bleak").click(function () {
+            window.location.href = 'index.html';
+        });
+
+        $("#back").click(function () {
+           window.history.back();
+        });
+        $(".address").click(function () {
+            window.location.href = 'setting.html?pg=sh';
+
+        });
+        let ads = JSON.parse(localStorage.getItem('ads'));
+        console.log(ads);
+        if (ads){
+            $(".address").children("#temp").remove();
+            $('<p><strong><span id="name">'+ ads['name'] +'</span><span id="phone" class="small">'+ ads['phone'] +'</span></strong></p>\n' +
+                '                <p class="small">'+ ads['address'] +'</p>').appendTo(".address");
+        }
+
+
+
+    });
+</script>
+</body>
+</html>

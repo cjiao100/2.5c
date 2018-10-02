@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index/sort.css">
+    <link rel="stylesheet" href="css/fontSetting.css">
+</head>
+<body>
+    <div id="page-two" class="page page-two">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <form class="navbar-form">
+                <div class="input-group form-group">
+                    <input name="search" class="input-sm" placeholder="热门搜索。。。">
+                </div>
+            </form>
+        </nav>
+        <div class="feilei-body">
+            <div class="col-sm-3 col-xs-3 fenlei">
+                <div id="left" style="overflow: hidden">
+                    <ul id="left-list">
+                        <li class="active">
+                            <a>热卖精选</a>
+                        </li>
+                        <li>
+                            <a>Cos游戏</a>
+                        </li>
+                        <li>
+                            <a>Cos动漫</a>
+                        </li>
+                        <li>
+                            <a>Cos汉服</a>
+                        </li>
+                        <li>
+                            <a>Cos小说</a>
+                        </li>
+                        <li>
+                            <a>Cos原创</a>
+                        </li>
+                        <li>
+                            <a>Cos周边</a>
+                        </li>
+                        <li>
+                            <a>其他</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9 col-xs-9 xx-fenlei">
+                <div id="right" style="overflow: hidden;">
+                    <div>
+                        <div id="right-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer" class="foot">
+        <div id="str" class="footer-list">
+            <a href="index_periphery.html" data-target="page-thr"><span class="small">周边</span></a>
+        </div>
+        <div id="lis" class="footer-list">
+            <a href="index_sort.html" data-target="page-two"><span class="small">分类</span></a>
+        </div>
+        <div id="ide" class="footer-list">
+            <a href="index_index.html" data-target="page-one"><span class="small">主页</span></a>
+        </div>
+        <div id="mesr" class="footer-list">
+            <a href="index_chat.html" data-target="page-fou"><span class="small">消息</span></a>
+        </div>
+        <div id="my" class="footer-list">
+            <a href="index_my.html" data-target="page-fiv"><span class="small">我的</span></a>
+        </div>
+    </div>
+    <div class="search">
+        <!--搜索界面-->
+        <form class="input-group">
+            <div class="form-group">
+                <label for="search" class="sr-only">search</label>
+                <input type="text" class="input-sm bar" id="search" placeholder="search..">
+            </div>
+        </form>
+        <div id="b"></div>
+    </div>
+    <script src="dist/jquery-3.3.1.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/por.js"></script>
+    <script src="js/getShop.js"></script>
+    <script src="js/getSort.js"></script>
+    <script type="text/javascript">
+        $(function () {
+        	let sort = JSON.parse(window.localStorage.getItem('sort'));
+        	if (sort==='' || sort===null){
+        		getSort(0);
+        	} else {
+        		indexUl(sort);
+        	}
+            
+        });
+
+        //设置列表界面的触摸滑动事件
+        'use strict';
+        let right = document.getElementById("right");
+
+        let rs = right.children;
+        for (let i in rs){
+            let ry;
+            let y;
+            let py;
+            //避免遍历到自身创建的对象
+            if(!rs.hasOwnProperty(i)) continue;
+            rs[i].ontouchstart = function (e) {
+                ry = y?e.touches[0].pageY-y:e.touches[0].pageY;
+            };
+            rs[i].ontouchmove = function (e) {
+                py = $("#other").offset().top;
+                y = e.touches[0].pageY - ry;
+                let index = rs[i].style.transform.indexOf('(');
+                let lastIndex = rs[i].style.transform.lastIndexOf('p');
+                let ty = parseInt(rs[i].style.transform.slice(index+1, lastIndex))-y;
+                if (y > 0 && ty < 0){
+                    rs[i].style.pointerEvents = 'none';
+                    return;
+                } else if (py <= 60 && ty > 0){
+                    rs[i].style.pointerEvents = 'none';
+                    return;
+                }
+                rs[i].style.transform = "translateY(" + y + "px)";
+
+                let titles = $(".sort-title");
+                for (let i=0; i<titles.length; i++){
+                    if ($(titles[i]).offset().top <= 300){
+                        let lefta = $("#left-list li");
+                        $(lefta[i]).addClass('active').siblings('li').removeClass('active');
+                    }
+                }
+            };
+            rs[i].ontouchend = function (e) {
+                rs[i].style.pointerEvents = 'auto';
+                if (y >= 0){
+                    rs[i].style.transform = "translateY(0px)";
+                } else if (py <= 60){
+                    rs[i].style.transform = "translateY(-1700px)";
+                }
+            };
+        }
+    </script>
+</body>
+</html>

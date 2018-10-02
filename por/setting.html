@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/setting.css">
+</head>
+<body>
+<div id="home">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index_my.html" class="navbar-brand">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span>设置</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <ul class="list-group">
+            <li class="list-group-item">账号管理 <span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+            <li class="list-group-item">收货地址管理 <span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+        </ul>
+        <ul class="list-group">
+            <!--<li class="list-group-item">问题反馈 <span class="glyphicon glyphicon-chevron-right pull-right"></span></li>-->
+            <li class="list-group-item">检查更新 <span class="glyphicon glyphicon-chevron-right pull-right"></span></li>
+        </ul>
+    </div>
+</div>
+<div id="zh">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#home" class="navbar-brand">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span>账号管理</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item clearfix"><span>头像</span>
+                <img id="himg" class="img-circle pull-right pull-right" src="img/header.svg" alt="">
+                <label for="headimg" class="sr-only">头像</label>
+                <input id="headimg" type="file" accept="image/*"> </li>
+            <li class="list-group-item"><p>昵称 <input type="text" id="username" class="small text-muted pull-right" placeholder="xmh"></p></li>
+            <li class="list-group-item"><p>手机号 <input type="text" id="userphone" class="small text-muted pull-right" placeholder="1213456" disabled></p></li>
+        </ul>
+        <button id="save" class="btn btn-primary">保存</button>
+    </div>
+</div>
+<div id="sh">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#home" class="navbar-brand">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span>收货地址管理</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <ul id="adds" class="list-group">
+            <li class="list-group-item">
+                <div id="dznr">
+                    <p><strong><span id="name">沃尔多</span><span id="phone" class="small">124515474141</span></strong></p>
+                    <p id="address" class="small text-muted">山西太原经觉得大家是否</p>
+                </div>
+                <span class="text-danger bj">删除</span>
+            </li>
+        </ul>
+        <div class="container tjan">
+            <a href="#bj" class="btn btn-primary">添加新地址</a>
+        </div>
+    </div>
+</div>
+<div id="bj">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="#sh" class="navbar-brand">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span>编辑收货地址</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <ul class="list-group">
+            <li class="list-group-item"><input type="text" placeholder="收件人"></li>
+            <li class="list-group-item"><input type="text" placeholder="手机电话"></li>
+            <li class="list-group-item"><input type="text" placeholder="收件地址"></li>
+        </ul>
+        <div class="container tjan">
+            <a id="append" class="btn btn-primary">确定添加</a>
+        </div>
+    </div>
+</div>
+
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script src="js/get_url.js"></script>
+<script>
+	'use strict';
+    $(function () {
+        let url = $.getUrlParam("pg");
+        $("#"+url).show().siblings("div").hide();
+
+        $("#himg").click(function () {
+           $("#headimg").trigger("click");
+        });
+        $("#headimg").change(function () {
+            //获取图片地址
+            function getObjectURL(file) {
+                let url = null;
+                if (window.createObjcectURL != undefined) {
+                    url = window.createOjcectURL(file);
+                } else if (window.URL != undefined) {
+                    url = window.URL.createObjectURL(file);
+                } else if (window.webkitURL != undefined) {
+                    url = window.webkitURL.createObjectURL(file);
+                }
+                return url;
+            }
+
+            let img_url = getObjectURL(this.files[0]);
+            console.log(img_url);
+            $('#himg').attr('src', img_url);
+        });
+        $("#save").click(function () {
+            let username = $("#username").val();
+            let userphone = $("#userphone").val();
+            if (userphone !== 0){
+                $("#userphone").attr("placeholder", userphone);
+            }
+            if (username !== 0){
+                $("#username").attr("placeholder", username);
+            }
+        });
+
+        $("#home ul:first-child li").click(function () {
+            let lix = $(this).index();
+            $("body > div").eq(lix+1).show();
+            $("#home").hide();
+        });
+        $("[href='#home']").click(function () {
+            if (url) {
+                window.history.back();
+            } else {
+                $("#home").show();
+                $(this).parents("#zh, #sh").hide();
+            }
+        });
+        $("[href='#bj']").click(function () {
+            $("#sh").hide();
+            $("#bj").show();
+        });
+        $("[href='#sh']").click(function () {
+            $("#bj").hide();
+            $("#sh").show();
+        });
+        $("body").delegate(".bj", "click", function () {
+            let $li = $(this).parents('li');
+            let address = $li.find('#address').text();
+            let name = $li.find("[id='name']").text();
+            let phone = $li.find("[id='phone']").text();
+            let ads = JSON.parse(localStorage.getItem('ads'));
+            if (ads){
+                if (ads['name'] === name && ads['phone'] === phone && ads['address'] === address){
+                    localStorage.clear();
+                }
+            }
+            $(this).parents("li").remove();
+        });
+        $("#append").click(function () {
+            let mess = $("#bj li").children("input");
+            let address = $(
+                '<li class="list-group-item">' +
+                    '<div id="dznr">' +
+                        '<p><strong><span id="name">' + $(mess[0]).val() + '</span><span id="phone" class="small">' + $(mess[1]).val() + '</span></strong></p>' +
+                        '<p id="address" class="small text-muted">' + $(mess[2]).val() + '</p>' +
+                    '</div>' +
+                    '<span class="text-danger bj">删除</span>' +
+                '</li>'
+            );
+            $("#bj li").children("input").val("");
+            $("#adds").append(address);
+            $("#bj").hide();
+            $("#sh").show();
+        });
+
+        $("#adds").delegate("#dznr", "click", function () {
+            let address = $(this).find('#address').text();
+            let name = $(this).find("[id='name']").text();
+            let phone = $(this).find("[id='phone']").text();
+            let ads = {
+                address: address,
+                name: name,
+                phone: phone
+            };
+            let strads = JSON.stringify(ads);
+            localStorage.setItem('ads', strads);
+            window.history.back();
+        });
+
+    });
+</script>
+</body>
+</html>

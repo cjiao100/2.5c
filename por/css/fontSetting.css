@@ -1,0 +1,10 @@
+.font_setting{
+    /*white-space:nowrap;*/
+    /*width: 100%;*/
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+.font_nowrap{
+	white-space:nowrap;
+}

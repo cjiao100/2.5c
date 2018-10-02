@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 595.3 841.9" style="enable-background:new 0 0 595.3 841.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E71F19;}
+	.st1{fill:#FFFEFE;}
+	.st2{fill:#FDFDFE;}
+	.st3{fill:#E7211C;stroke:#E7211C;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#E7211C;stroke-width:8;stroke-linecap:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#E71F19;stroke-width:5;stroke-miterlimit:10;}
+</style>
+<g id="XMLID_20_">
+	<path id="XMLID_3_" class="st0" d="M227.1,181.2H72.4c-10.5,0-19-8.6-19-19V85.8c0-10.4,8.5-19,19-19h154.7c10.4,0,19,8.6,19,19
+		v76.4C246.1,172.7,237.5,181.2,227.1,181.2z"/>
+	<path id="XMLID_2_" class="st1" d="M207.7,133.6H91.8c-3.7,0-6.6-3-6.6-6.6v0c0-3.7,3-6.6,6.6-6.6h115.9c3.7,0,6.6,3,6.6,6.6v0
+		C214.3,130.6,211.3,133.6,207.7,133.6z"/>
+	<path id="XMLID_5_" class="st1" d="M170,161.7H91.8c-3.7,0-6.6-3-6.6-6.6v0c0-3.7,3-6.6,6.6-6.6H170c3.7,0,6.6,3,6.6,6.6v0
+		C176.7,158.7,173.7,161.7,170,161.7z"/>
+	<path id="XMLID_4_" class="st1" d="M207.7,104.4H91.8c-3.7,0-6.6-3-6.6-6.6v0c0-3.7,3-6.6,6.6-6.6h115.9c3.7,0,6.6,3,6.6,6.6v0
+		C214.3,101.5,211.3,104.4,207.7,104.4z"/>
+</g>
+<polygon id="XMLID_6_" class="st0" points="149.7,231.9 53.4,327.8 246.1,327.8 "/>
+<g id="XMLID_1_">
+	<g id="XMLID_45_">
+		<path id="XMLID_46_" class="st0" d="M54.8,327.5v51.4c0,13.2,10.8,24,24,24h27c13.2,0,24-10.8,24-24v-51.4H54.8z"/>
+	</g>
+</g>
+<g id="XMLID_12_">
+	<g id="XMLID_43_">
+		<path id="XMLID_44_" class="st0" d="M170.9,327v51.3c0,13.2,10.8,24,24,24h27c13.2,0,24-10.8,24-24V327H170.9z"/>
+	</g>
+</g>
+<g id="XMLID_14_">
+	<ellipse id="XMLID_13_" class="st0" cx="479.6" cy="166.5" rx="97.4" ry="80.9"/>
+	<polygon id="XMLID_15_" class="st0" points="411.1,186.6 367.8,253.6 448.2,220.1 	"/>
+</g>
+<path id="XMLID_21_" class="st2" d="M525.3,155.1H436c-1.8,0-3.3-1.5-3.3-3.3v0c0-1.8,1.5-3.3,3.3-3.3h89.2c1.8,0,3.3,1.5,3.3,3.3v0
+	C528.6,153.6,527.1,155.1,525.3,155.1z"/>
+<path id="XMLID_23_" class="st2" d="M525.3,184.6H436c-1.8,0-3.3-1.5-3.3-3.3v0c0-1.8,1.5-3.3,3.3-3.3h89.2c1.8,0,3.3,1.5,3.3,3.3v0
+	C528.6,183.1,527.1,184.6,525.3,184.6z"/>
+<g id="XMLID_27_">
+	<circle id="XMLID_22_" class="st3" cx="433.5" cy="381.6" r="54.9"/>
+	<path id="XMLID_24_" class="st4" d="M431.9,435.7c0,0-83.6,0-91.2,79.4"/>
+	<path id="XMLID_28_" class="st4" d="M433.5,435.7c0,0,83.6,0,91.2,79.4"/>
+</g>
+<circle id="XMLID_11_" class="st5" cx="109" cy="563.9" r="54.6"/>
+<line id="XMLID_25_" class="st5" x1="145.6" y1="603.3" x2="235.8" y2="680.4"/>
+</svg>

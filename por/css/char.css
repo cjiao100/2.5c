@@ -1,0 +1,108 @@
+body{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 50px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+.navbar .pager{
+    margin: 9px 0 9px;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 13px;
+    color: white;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+.navbar-default{
+    background-color: #db1a1d;
+}
+.navbar .navbar-form{
+    border: none;
+    margin: 0;
+    padding: 8px;
+    width: 80%;
+}
+.list-group-item{
+    border: none;
+    padding: 10px 0;
+    background: none;
+}
+.left, .right{
+    position: relative;
+}
+
+.header-img{
+    background-image: url("../img/header.svg");
+    background-color: transparent !important;
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.right .header-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.list-group-item > .messages >  .send{
+    border-radius: 8px;
+    padding: 8px;
+    position: relative;
+}
+.list-group .left > .send{
+    background-color: lightblue;
+    color: black;
+    left: 16px;
+}
+.list-group .right > .send{
+    background-color: darkblue;
+    color: white;
+    right: 60px;
+}
+.send {
+    max-width: 200px;
+    min-height: 35px;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 20px;
+    font-size: 1em;
+    z-index: 1000;
+    background: center no-repeat;
+}
+.send > p{
+    margin: 0;
+}
+.send .arrow {
+    position:absolute;
+    top: 10px;
+    right:-16px;
+    width:0;
+    height:0;
+    font-size:0;
+    border:solid 8px;
+    border-left-color: darkblue;
+}
+.list-group .left > .send > .arrow{
+    left:-16px;
+    border-color: white;
+    border-right-color: lightblue;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/login.css">
+	<link rel="stylesheet" href="css/toast.css">
+</head>
+<body>
+   	 <div class="container">
+    	<div class="group">
+    		<div class="input-group">
+    			<label for="phonenum" class="icon"><img src="img/login/phone.png" alt="" /></label>
+    			<input type="text" id="phonenum" placeholder="请输入手机号码..." />
+    			<label for="passwordnum" class="icon"><img src="img/login/2.png"/></label>
+    			<input type="password" id="passwordnum" placeholder="请输入密码..." />
+    			<label for="captcha" class="icon"><img src="img/login/3.png"/></label>
+    			<input type="password" id="captcha" placeholder="请输入验证码	" />
+    			<img src="#" alt="点击更换" title="点击更换" id="captcha_img" class="cap_alt" onclick="changeVerifyCode(this)">
+    		</div>
+    		<div class="forget">
+    			<a href="">忘记密码?</a>
+    		</div>
+    		<div class="input-group">
+    			<button id="login" class="btn">立即登录</button>
+    		</div>
+    		<div class="register">
+    			<p>还没有账号？<a href="register.html">立即注册</a></p>
+    		</div>
+    	</div>
+    </div>
+     <div id="snackbar"></div>
+	 <script src="dist/jquery-3.3.1.js"></script>
+	 <script src="js/login.js"></script>
+	 <script src="js/por.js"></script>
+	 <script src="js/toast.js"></script>
+    <script>
+    	// 更换验证码
+	    function changeVerifyCode(img) {
+	        img.src = URL+"/kaptcha?" + Math.floor(Math.random() * 1000);
+	    }
+    </script>
+</body>
+</html>

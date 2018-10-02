@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/friends-index.css">
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a id="back" class="navbar-brand icon">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a id="open" class="navbar-brand pull-right icon" href="#">
+                    <span class="glyphicon glyphicon-menu-hamburger"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <img src="" alt="">
+        <div class="center-block">
+            <img class="img-circle" src="img/header.svg" alt="">
+            <p><strong>王恩德</strong></p>
+            <p class="small col-xs-5">关注他的：<span>123</span><p>
+            <p class="col-xs-2">|</p>
+            <p class="small col-xs-5"> 他的发表：<span>3</span></p>
+        </div>
+    </div>
+    <div class="zjk">
+        <div class="col-xs-4"><a href="./details_sc.html?pg=gz">关注</a></div>
+        <div class="col-xs-4"><a href="./details_sc.html?pg=bb">收藏</a></div>
+        <div class="col-xs-4"><a href="./details_sc.html?pg=wz">最近浏览</a></div>
+    </div>
+    <div class="navbar navbar-fixed-bottom row" role="navigation">
+        <button class="btn btn-primary col-xs-5">加好友</button>
+        <div class="col-xs-2"></div>
+        <button id="send" class="btn btn-primary col-xs-5">发消息</button>
+    </div>
+    <div class="modal fade open-modal" id="other" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="btn btn-danger">删除好友</button>
+                    <button class="btn btn-default">加入黑名单</button>
+                    <button class="btn btn-default" data-dismiss="modal" aria-label="Close">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="dist/bootstrap.js"></script>
+<script type="text/javascript" src="js/por.js"></script>
+<script>
+    $(function () {
+        $("#open").click(function () {
+            $("#other").modal("toggle");
+        });
+        $("#send").click(function () {
+            let userId;
+            addChat(userId);
+
+        });
+        $("#back").click(function () {
+            window.history.back();
+        });
+        
+    });
+    
+    function addChat(receiverId) {
+        $.ajax({
+            url: URL + '/chat/add/' + receiverId,
+            type: 'post',
+            xhrFields: {
+                withCredentials:true
+            },
+            success: function (xhr) {
+                window.location.href = "chat.html?chatId=" + xhr.data;
+            }
+        });
+    }
+</script>
+</body>
+</html>

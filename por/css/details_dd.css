@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.gwxx{
+    padding-top: 95px;
+    padding-bottom: 50px;
+}
+.navbar-default{
+    background-color: #db1a1d;
+}
+.navbar-default .navbar-text{
+    color: white;
+}
+/*input[type=checkbox] {*/
+    /*visibility: hidden;*/
+    /*margin: 0;*/
+/*}*/
+.navbar .pager{
+    margin: 9px 0 9px;
+}
+.media{
+    padding: 5%;
+    background-color: #ddd;
+}
+.media-body{
+    padding-top: 10px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 50px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+img{
+    width: 90px;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 13px;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+.navbar > .fy ul{
+    margin: 0  0 0 5%;
+    width: 90%;
+}
+[class^=col-xs-],
+[class*= col-xs-]{
+    padding: 0;
+}
+.navbar > .fy ul a{
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+.gmjl, .wlxx, .wl{
+    display: none;
+}
+.gwc .mes{
+    position: relative;
+}
+.gwc .pay > .input{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.navbar-footer{
+    border: none;
+}
+.navbar-footer-div{
+    line-height: 50px;
+    height: 50px;
+    color: white;
+}
+.navbar-footer-div button{
+    height: 100%;
+    width: 75px;
+    margin-left: 15px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #db1a1d;
+}
+.navbar-form{
+    padding: 0;
+    margin: 0;
+    border-top: none;
+    border-bottom: none;
+    height: 100%;
+}
+
+.gmjl .page-header{
+    margin-top: 10px;
+    position: relative;
+}
+.gmjl .page-header > p{
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background: #fff;
+    padding: 0 5px;
+}
+.gmjl .sp > img{
+    width: 24%;
+    padding: 1px;
+}
+.wlxx .sp-title{
+    height: 40px;
+    overflow: hidden;
+}
+.wlxx .sp-wl{
+    width: 100%;
+    white-space:nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.wlxx .sp-wl p{
+	width: 90%;
+}
+.wl{
+    background-color: #ddd;
+}
+.wl .navbar{
+    margin-bottom: 0;
+}
+.wl .media-body, .media-left{
+    position: relative;
+    background-color: #ddd;
+    vertical-align: middle;
+    
+}
+.wl .media-body div:first-child{
+    height: 40px;
+    overflow: hidden;
+}
+.wl .media-body div:last-child{
+    height: 20px;
+    overflow: hidden;
+}
+.wl .pay{
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}

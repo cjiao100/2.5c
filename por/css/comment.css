@@ -1,0 +1,70 @@
+body{
+    padding-top: 4rem;
+}
+
+/*导航栏的设置*/
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 2.5rem;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+.navbar .pager{
+    margin: 0.45rem 0 0.45rem;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 0.65rem;
+    color: white;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/*每条评论的设置*/
+.comment-neirong{
+    padding: 1rem;
+    margin-bottom: 0.1rem;
+    background-color: #fff;
+    border-bottom: 0.1rem solid #ddd;
+}
+.comment-neirong > p:nth-child(1){
+    font-size: 0.7rem;
+}
+.comment-neirong > p:nth-child(2){
+    font-size: 0.5rem;
+    color: #999;
+}
+.comment-neirong > p:nth-child(4){
+    height: 1.25rem;
+    margin-bottom: 0;
+    padding: 0.15rem;
+    line-height: 1.25rem;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(1){
+    font-size: 0.5rem;
+    color: #999;
+    float: left;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(2){
+    font-size: 0.5rem;
+    color: #999;
+    float: right;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(2) > button{
+    border: 0.1rem solid #888;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+/*评论详细页*/

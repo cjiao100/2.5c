@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/register.css">
+    <script src="dist/jquery-3.3.1.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/por.js"></script>
+</head>
+<body>    
+    <div class="container">
+    	<div class="group">
+    		<div class="input-group">
+    			<label for="username" class="icon"><img src="img/login/username.png" alt="" /></label>
+    			<input type="text" id="username" placeholder="请输入用户名" />
+    			<label for="phonenum" class="icon"><img src="img/login/phone.png" alt="" /></label>
+    			<input type="text" id="phonenum" placeholder="请输入手机号码" />
+    			<label for="passwordnum" class="icon"><img src="img/login/2.png"/></label>
+    			<input type="password" id="passwordnum" placeholder="请输入6~12位密码" />
+    			<label for="againpassword" class="icon"><img src="img/login/2.png"/></label>
+    			<input type="password" id="againpassword" placeholder="确认密码" />
+    			<label for="captcha_img" class="icon"><img src="img/login/3.png"/></label>
+    			<input type="password" id="captcha_img" placeholder="请输入验证码" />
+    			<div class="inter">
+	                <span class="hidden" id="t">60秒后重新获取</span>
+	                <button id="sms">获取验证码</button>
+	            </div>
+    		</div>
+    		<div class="input-group">
+    			<button class="btn" id="full">注册</button>
+    		</div>
+    		<div class="register">
+    			<p>已有账号？<a href="login.html">立即登录</a></p>
+    		</div>
+    	</div>
+    </div>
+	<div id="snackbar"></div>
+	<script type="text/javascript">
+        $("#sms").click(function (){
+            //获取手机号
+            let phone = $("#phone").val();
+            //校验手机号
+            if(!(/^1[34578]\d{9}$/.test(phone))){
+                $("#snackbar").text("手机号码有误，请重填");
+                toast();
+                return false;
+            }
+
+            $.ajax({
+                type: "get",
+                url: URL+"/sendSms?phone="+phone,
+                contentType: "application/json",
+                dataType: "json",
+                xhrFields:{
+                    withCredentials:true
+                },
+                success: function (xhr) {
+                    if (xhr.success){
+                        $("#t").removeClass("hidden").addClass("show");
+                        $("#hq").addClass("hidden");
+                        let data = parseInt(60);
+                        let int = setInterval(function () {
+                            data--;
+                            $("#t").text(data + "秒后重新获取");
+                            if (data <= 0) {
+                                int = window.clearInterval(int);
+                                $("#t").text("重新获取");
+                            }
+                        }, 1000);
+                    }
+                }
+            });
+        })
+
+
+        $("#full").click(function () {
+            //获取昵称
+            let nickName = $("#username").val();
+            //获取密码
+            let password = $("#passwordnum").val();
+            //获取第二次输入的密码
+            let agpassword = $("#againpassword").val();
+            //获取验证码
+            let sms = $("#captcha_img").val();
+            //获取手机号
+            let phone = $("#phonenum").val();
+
+            let userInfo = {
+                nickName: nickName,
+                password: password,
+                phone: phone,
+                smsCode: sms
+            };
+            console.log(userInfo);
+
+            if (password === agpassword){
+                $.ajax({
+                    type: "post",
+                    url: URL+"/register",
+                    data: JSON.stringify(userInfo),
+                    contentType: "application/json",
+                    dataType: "json",
+                    xhrFields:{
+                        withCredentials:true
+                    },
+                    success: function (xhr) {
+                        if (xhr.success){
+                            window.location.href = "index.html";
+                        } else {
+                            alert("注册失败");
+                            window.location.href = 'login.html';
+						}
+                    }
+                });
+            } else {
+                $("#passwordnumw").val("");
+                $("#againpassword").val("");
+                $("#snackbar").text("两次输入密码不同，请重新输入");
+                toast();
+            }
+
+        });
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="dist/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/release.css"/>
+	</head>
+	<body>
+		<div id="release">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<ul class="navbar-left pager">
+						<li class="previous"><a href="index_my.html"><span aria-hidden="true">&larr;</span></a></li>
+					</ul>
+					<h3 class="navbar-text navbar-title"><strong>发表</strong></h3>
+				</div>
+				<div aria-label="Page navigation" class="fy">
+					<ul class="pagination">
+						<li class="col-xs-6"><a href="#">文章</a></li>
+						<li class="col-xs-6"><a href="#">商品</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="article">
+				<div class="add">
+					<p id="wz">发表新的文章<span class="glyphicon glyphicon-plus pull-right"></span></p>
+				</div>
+				<div id="myWz" class="container"></div>
+			</div>
+			<div class="commodity">
+				<div class="add">
+					<p id="sp">发布您的商品<span class="glyphicon glyphicon-plus pull-right"></span></p>
+				</div>
+				<div id="mySp" class="container"></div>
+			</div>
+		</div>
+		<div id="add_wz">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<ul class="navbar-left pager">
+						<li class="previous"><a id="back-wz" ><span class="glyphicon glyphicon-chevron-left small"></span>&nbsp;退出</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div id="cwz" class="container">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<label for="wz-name">文章名称</label>
+						<input id="wz-name" type="text" placeholder="名称">
+					</li>
+					<li class="list-group-item">
+						<label for="wz-article">文章内容</label>
+						<div>
+							<textarea id="wz-article" placeholder="请输入您的内容"></textarea>
+						</div>
+					</li>
+					<li id="pt" class="list-group-item">
+						<p class="small">配图</p>
+						<input id="image_wz" type="file" multiple="multiple" accept="image/*">
+						<label for="image_wz" class="lb"></label>
+					</li>
+				</ul>
+				<button id="aw" class="btn btn-primary">发表</button>
+			</div>
+		</div>
+		<div id="add_sp">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container-fluid">
+					<ul class="navbar-left pager">
+						<li class="previous"><a id="back"><span class="glyphicon glyphicon-chevron-left small"></span>&nbsp;退出</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div id="csp" class="container">
+				<ul class="list-group">
+					<li class="list-group-item">
+						<label for="sp-name">商品名称</label>
+						<input id="sp-name" type="text" placeholder="名称">
+					</li>
+					<li class="list-group-item">
+						<div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" id="sort" data-toggle="dropdown">
+                                请选择分类
+                                <span class="caret"></span>
+                            </button>
+                           <ul id="sort-menu" class="dropdown-menu"></ul>
+                        </div>
+					</li>
+					<li class="list-group-item">
+						<label for="sp-price">商品价格</label>
+						<input id="sp-price" type="number" placeholder="价格">
+					</li>
+					<li class="list-group-item">
+						<label for="format">商品规格</label>
+						<input id="format" type="text" placeholder="规格">
+					</li>
+					<li class="list-group-item">
+						<label>商品参数</label>
+						<table class="table">
+							<thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>信息</th>
+                                </tr>
+                            </thead>
+							<tbody>
+                                <tr id="parameter">
+                                    <td><input id="parameter_name" type="text" placeholder='请输入'></td>
+                                    <td><input type="text"></td>
+                                </tr>
+                            </tbody>
+						</table>
+						
+					</li>
+					<li id="zs" class="list-group-item">
+						<p class="small">展示图片</p>
+						<div class="img-lb">
+                            <input class="cover" id="image_lb" type="file" accept="image/*" multiple="multiple">
+                            <label for="image_lb" class="lb"><img></label>
+                        </div>
+					</li>
+					<li id="xq" class="list-group-item">
+						<p class="small">详情图片</p>
+						<div class="img-xq">
+                            <input class="infor" id="image_xq" type="file" accept="image/*" multiple="multiple">
+                            <label for="image_xq" class="lb"><img></label>
+                        </div>
+					</li>
+				</ul>
+				<p class="tisi small text-muted">规格请用逗号隔开</p>
+				<button id="as" class="btn btn-primary">发表</button>
+			</div>
+		</div>
+		<script src="dist/jquery-3.3.1.js"></script>
+		<script src="js/por.js"></script>
+		<script src="js/delete.js"></script>
+        <script src="js/MyRelease.js"></script>
+        <script src="js/shop.js"></script>
+		<script src="js/getSort.js"></script>
+		<script src="js/article.js"></script>
+		<script type="text/javascript">
+			$(function () {
+				$(".pagination li").click(function () {
+		            let lix = $(this).index();
+		            $("#release > div").eq(lix).show().siblings("div").hide();
+		        });
+
+				//进去发布页面
+                $("#wz").click(function () {
+                    $("#release").hide();
+                    $("#add_wz").show();
+                    $("#pt").show();
+                });
+                $("#sp").click(function () {
+                    $("#release").hide();
+                    $("#add_sp").show();
+                    $("#zs").show();
+                    $("#xq").show();
+                });
+                //返回已发布的界面
+				$("#back").click(function () {
+                    $("#release").show();
+                    $("#add_sp").hide();
+//                    tdelete($('tbody'));
+                    $("#sp-name").val("");
+                    $("#sp-price").val("");
+                    $("#format").val("");
+                    $("#sort").text("请选择分类");
+                    tdelete($("tbody"));
+                    initShop();
+                    $("#bj_sp").remove();
+                    $("#as").show();
+                });
+                $("#back-wz").click(function () {
+                    $("#release").show();
+                    $("#add_wz").hide();
+                    $("#wz-name").val("");
+                    $("#wz-article").val("");
+                });
+
+                // 编辑界面的设置
+                $(".container").delegate("#bj_wz", "click", function () {
+                    wz_name = $("#wz-name").val();
+                    article = $("#wz-article").val();
+                    $(".caption h4").text(wz_name);
+                    $(".caption p").text(article);
+                    this.remove();
+                    $("#as").show();
+                    $("#back-wz").trigger("click");
+                    $("#wz-name").val("");
+                    $("#wz-article").val("")
+                });
+
+                // 当属性输入框获得焦点时，动态创建下一行列表
+                $(".table").delegate('#parameter_name', 'focus', function () {
+                    if ($(this).parents('tr').next('tr').length <= 0){
+                        $(this).parents("tr").after("<tr>\n" +
+                            "                  <td><input id=\"parameter_name\" type=\"text\" placeholder='请输入'></td>\n" +
+                            "                  <td><input type=\"text\"></td>\n" +
+                            "                </tr>");
+                    }
+                });
+
+                $("#sort").click(function () {
+                    $("#sort-menu").fadeIn();
+                });
+                $("#sort-menu").delegate('.sort-li', 'click', function () {
+                    if ($(this).data('name') === 'sun-menu'){
+                        $(this).children('ul').fadeIn();
+                    } else {
+                        let sortText = $(this).children('button').text();
+                        $("#sort").text(sortText);
+                        $("#sort-menu").fadeOut();
+                    }
+                    $(this).siblings('li').children('ul').fadeOut();
+                });
+            });
+		</script>
+	</body>
+</html>

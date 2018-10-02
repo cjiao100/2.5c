@@ -1,0 +1,73 @@
+.page-two > .navbar > .navbar-form{
+    width: 100%;
+}
+.page-two > .navbar > .navbar-form > .form-group{
+    width: 100%;
+}
+.page-two > .feilei-body{
+    overflow: hidden;
+    height: 100%;
+    margin-top: 50px;
+}
+/*左侧列表*/
+.page-two > .feilei-body > .fenlei{
+    height: 100%;
+    padding: 0;
+    background-color: rgba(245, 148, 148, 0.72);
+}
+.page-two > .feilei-body > .fenlei  ul > li{
+    height: 50px;
+    list-style-type: none;
+    text-align: center;
+}
+.page-two > .feilei-body > .fenlei  ul > li > a{
+    line-height: 50px;
+    color: #f7f7f7;
+}
+/*右侧内容*/
+.page-two > .feilei-body > .xx-fenlei{
+    height: 100%;
+}
+.page-two > .feilei-body .col-xs-9{
+    padding-left: 7px;
+    padding-right: 0;
+}
+#right ul{
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+#right ul li{
+    padding-bottom: 10px;
+    background: none;
+
+}
+.xx-fenlei .sp{
+    float: left;
+    border: none;
+    /*padding: 0 0 0 5%;*/
+    width: 33%;
+    text-align: center;
+    padding: 0;
+    /*overflow: hidden;*/
+}
+.xx-fenlei .sp p{
+    margin: 0;
+    text-align: center;
+    height: 25px;
+}
+.xx-fenlei .sp div{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    margin-right: 0;
+}
+.xx-fenlei .sp img{
+    width: 70px;
+    max-height: 70px;
+}
+/*列表选中状态*/
+.active{
+    border-left: 3px solid lightcoral;
+    background-color: #f03a3a;
+}

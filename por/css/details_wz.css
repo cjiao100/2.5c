@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a:focus,input:focus,button:focus{
+    outline-offset: 0;
+    outline: -webkit-focus-ring-color auto 0;
+}
+body{
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding-bottom: 25px;
+}
+.panel-body > p{
+	text-indent: 2rem;
+	line-height: 2rem;
+}
+@media screen and (max-width: 768px){
+    .navbar-right{
+        float: right !important;
+    }
+    .navbar-left{
+        float: left !important;
+    }
+}
+.wz-header{
+    margin-bottom: 0px;
+}
+.wz-header.navbar-default{
+	background: #db1a1d;
+}
+.navbar-default .navbar-brand,
+.navbar-default .navbar-text{
+	color: white !important;
+}
+.navbar-text{
+    font-size: 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.wz-body .wz-writer{
+    line-height: 30px;
+    margin-bottom: 0;
+}
+.wz-body h4{
+    margin: 10px 0;
+}
+.wz-body .wz-writer span{
+    padding: 10px 0;
+}
+.wz-body .wz-writer .wz-writer-tx, .wz-pl-tx{
+    width: 30px;
+}
+.pl-body{
+    font-size: 14px;
+    margin-bottom: 0;
+}
+.pl-body > li{
+    position: relative;
+    background-color: #F5F5F5;
+    border: 0;
+}
+.pl-body > li + li{
+    border-top: 1px solid #dddddd;
+}
+.pl-body li div{
+    height: 30px;
+    width: 258px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 12px;
+}
+.my-pl{
+    margin-top: 10px;
+    position: relative;
+}
+.my-pl input{
+    width: 78%;
+}
+.my-pl button{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.ck_all{
+    font-size: 12px;
+}
+.wz-footer form button{
+    margin-top: 8px;
+    margin-left: 8px;
+    padding: 6px 30px 6px 12px;
+    border: none;
+    position: relative;
+    background: rgb(0,0,180);
+    color: white;
+}
+.wz-footer form button span{
+    font-size: 18px;
+    position: absolute;
+    top: 7px;
+    left: 45px;
+}
+.wz-footer form button:nth-child(2) span{
+    left: 58px;
+}
+.wz-footer div{
+    margin-top: 13px;
+}
+.wz-footer div a{
+    margin-right: 25px;
+}
+
+.comment-page{
+    display: none;
+    background-color: #eee;
+}
+.comment-neirong{
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+.comment-neirong > p:nth-child(1){
+    font-size: 14px;
+}
+.comment-neirong > p:nth-child(2){
+    font-size: 10px;
+    color: #999;
+}
+.comment-neirong > p:nth-child(4){
+    height: 25px;
+    margin-bottom: 0;
+    padding: 3px;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(1){
+    font-size: 10px;
+    color: #999;
+    float: left;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(2){
+    font-size: 10px;
+    color: #999;
+    float: right;
+}
+.comment-neirong > p:nth-child(4) > span:nth-child(2) > button{
+    border: 1px solid #888;
+    background-color: #fff;
+    border-radius: 20px;
+}
+    
+    
+    
+    /*××××××××××××××××关注按钮××××××××××××××××××*/
+.btn-gz{
+	 border: 1px solid red !important;
+}
+.btn-gz {
+    color: #000;
+    background-color: transparent;
+    padding: 5px 15px;
+}
+
+.btn-gz:hover,
+.btn-gz:focus,
+.btn-gz:active,
+.btn-gz.active,
+.open .dropdown-toggle.btn-gz {
+    color: #ffffff;
+    border-color: red;
+}
+
+.btn-gz:active,
+.btn-gz.active,
+.open .dropdown-toggle.btn-gz {
+    background-image: none;
+}
+
+.btn-gz.disabled,
+.btn-gz[disabled],
+fieldset[disabled] .btn-gz,
+.btn-gz.disabled:hover,
+.btn-gz[disabled]:hover,
+fieldset[disabled] .btn-gz:hover,
+.btn-gz.disabled:focus,
+.btn-gz[disabled]:focus,
+fieldset[disabled] .btn-gz:focus,
+.btn-gz.disabled:active,
+.btn-gz[disabled]:active,
+fieldset[disabled] .btn-gz:active,
+.btn-gz.disabled.active,
+.btn-gz[disabled].active,
+fieldset[disabled] .btn-gz.active {
+    border-color: red;
+}
+
+.btn-gz .badge {
+    color: #0084FF;
+    background-color: #ffffff;
+}

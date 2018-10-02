@@ -1,0 +1,115 @@
+#list > span, #message > span{
+    font-size: 23px;
+    margin-top: 10px;
+}
+.page-one  form{
+    padding: 10px 5px;
+}
+.page-one > .container{
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    padding: 0;
+    position: relative;
+}
+.page-one > .container > .header{
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+.page-one > .container > .header > .navigation{
+    list-style-type: circle;
+    position: absolute;
+    left: 50%;
+    bottom: 1%;
+    transform: translateX(-50%);
+}
+.page-one > .container > .header > .navigation > li{
+    margin: 8px;
+}
+.page-one > .container > .body-strip{
+    width: 100%;
+    margin-top: 10px;
+    height: 200px;
+}
+.page-one > .container > .body-strip > p{
+    font-size: large;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+.page-one > .container > .body-strip > div{
+    height: 85%;
+    /*display: block;*/
+}
+.carousel-indicators{
+    bottom: -10px;
+}
+.carousel-indicators .active {
+    width: 6px;
+    height: 6px;
+    margin: 0;
+    background-color: #000;
+}
+.carousel-indicators li{
+    width: 5px;
+    height: 5px;
+    border: 1px solid #000;
+}
+.slide-box{
+    display: -webkit-box;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling:touch;
+}
+.slide-item{
+    width: 200px;
+    height: 200px;
+    border:1px solid #ccc;
+    margin-right: 30px;
+    text-align: center;
+}
+.page-one > .container > .body-strip > div > div{
+    border-radius: 20px;
+    width: 130px;
+    height: 163px;
+    margin: 0 5px;
+    background-color: #ffffe5;
+}
+.page-one > .container > .body-strip > div > div > img{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #d4d4d4;
+    width: 100%;
+    height: 80%;
+}
+.page-one > .container > .body-block{
+    margin-top: 10px;
+    width: 100%;
+}
+.page-one > .container > .body-block > div{
+    /*margin-top: px;*/
+    width: 100%;
+    height: 200px;
+    /*background-color: #a94442;*/
+}
+.page-one > .container > .body-block > div > .tswz_img{
+    overflow: hidden;
+    width: 100%;
+    height: 60%;
+    padding: 10px 10px 0;
+    /*background-color: #1b6d85;*/
+}
+.page-one > .container > .body-block > div > .tswz_img > img{
+    width: 100%;
+}
+.page-one > .container > .body-block > div > .tswz_ty{
+    padding: 0 10px 10px;
+    height: 80px;
+}
+.page-one > .container > .body-block > div > .tswz_ty > div{
+    background-color: #faebdc;;
+    height: 100%;
+    padding: 10px;
+}
+.page-one > .container > .body-block > div > .tswz_ty > div > p{
+    font-size: medium;
+}

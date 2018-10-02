@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/details_sp.css">
+    <link rel="stylesheet" href="dist/iconfont.css">
+
+</head>
+<body>
+<!--商品详细页-->
+<!--分为展示页面，详细信息， 评论页面-->
+<!--
+    商品展示区
+    1.透明导航条
+    2.大图轮播
+    3.商品的基本信息，价格等
+-->
+    <div id="commodity" class="commodity_zs">
+        <!--透明导航栏-->
+        <nav class="navbar nav_bar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="back_page" class="navbar-brand icon">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="navbar-brand pull-right icon" href="#">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <!--商品的大图轮播-->
+        <div class="jumbotron commodity_img">
+            <div id="coverimg" class="carousel-inner" role="listbox">
+            </div>
+        </div>
+        <!--商品基本介绍-->
+        <div class="neirong">
+            <p id="price" class="text-danger"><stong></stong></p>
+            <p id="name"><strong></strong></p>
+            <div class="table-responsive">
+                <table class="table">
+                    <tr id="openserve"><td>服务</td><td>7天无理由退货</td><td><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+                    <tr id="opensize"><td>规格</td><td>请选择颜色分类</td><td><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+                    <tr id="openargument"><td>参数</td><td>产地，材质</td><td><span class="glyphicon glyphicon-menu-right"></span></td></tr>
+                </table>
+            </div>
+        </div>
+        <!--用户评论-->
+        <div class="comment_area">
+            <p class="comment_headr">
+                <span class="pull-left"><strong>评价</strong></span>
+                <span id="opencom" class="pull-right text-color"><strong>更多评价&nbsp;></strong></span>
+            </p>
+            <div class="comment">
+                <p class="text-color">天下一客</p>
+                <p>这东西是真的好，下回上新还来买</p>
+            </div>
+        </div>
+        <!--商品详情-->
+        <p class="spxq">————详情————</p>
+        <div id="informationimg" class="jumbotron infor">
+        </div>
+        <div class="dd">
+            <p>————到底了————</p>
+        </div>
+
+        <!--其他内容-->
+        <div id="serve" class="other"></div>
+        <div id="size" class="other"></div>
+        <div id="argument" class="other"></div>
+    </div>
+    <!--评论页面-->
+    <div id="comment" class="comment-page">
+        <nav id="comment-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a id="back" class="navbar-brand">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="navbar-brand sp_img">
+                        <img>
+                    </a>
+                    <a class="navbar-brand pull-right" href="#">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--立即购买，加入购物车，收藏商品-->
+    <div class="sp_footer navbar-fixed-bottom">
+        <a class="col-xs-2"><i class="iconfont icon-buoumaotubiao44"></i></a>
+        <a class="col-xs-4"></a>
+        <div class="col-xs-6 btn-group">
+            <a id="buy" class="btn">立即购买</a>
+            <a id="add" class="btn">加入购物车</a>
+        </div>
+    </div>
+<script src="dist/jquery-3.3.1.js"></script>
+<script src="js/por.js"></script>
+<script src="js/get_url.js"></script>
+<script src="js/shopDetails.js"></script>
+<script src="js/comment.js"></script>
+<script>
+	'use strict';
+    $(function () {
+        // 监听更多评论的点击事件
+        $("#opencom").click(function () {
+            $("#comment").show();
+            $("#commodity").hide();
+            getComment($.getUrlParam('shopId'), 1);
+        });
+        // 监听评论页面的返回按钮的点击事件
+        $("#back").click(function () {
+            $("#commodity").show();
+            $("#comment").hide();
+            $(".comment-neirong").remove();
+        });
+        // 监听其他页面的关闭按钮的点击事件
+        $(".other").delegate("#close", "click", function () {
+            $(".other").hide();
+            $(".sp_footer").show();
+        });
+        // 监听其他页面的开启按钮的点击事件
+        $("tr").click(function () {
+            var id = $(this).attr("id");
+            id = '#' + id.slice(4);
+            $(id).show();
+            $(".sp_footer").hide();
+        });
+
+        $("#buy").click(function () {
+            let p = parseFloat($("#price").text().substr(1));
+            window.location.href="details_zf.html?" + p;
+        });
+        
+        $("#back_page").click(function () {
+            window.history.back();
+        })
+    });
+</script>
+</body>
+</html>

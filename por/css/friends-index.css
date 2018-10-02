@@ -1,0 +1,61 @@
+a{
+    color: black;
+}
+a:focus,input:focus,button:focus{
+     outline-offset: 0;
+     outline: -webkit-focus-ring-color auto 0;
+ }
+
+.jumbotron{
+    background-color: rgba(233,155,149, 0.55);
+    margin: 0;
+}
+.jumbotron > div{
+    margin: 40px 0;
+    text-align: center;
+}
+.jumbotron > div > img{
+    width: 100px;
+    margin-bottom: 10px;
+}
+.jumbotron p{
+    font-size: 14px;
+}
+.jumbotron .small{
+    font-size: small;
+    font-weight: 300;
+}
+.zjk{
+    margin-bottom: 8px;
+    text-align: center;
+    line-height: 40px;
+}
+.zjk > div + div{
+    border-left: 1px solid #8c8c8c;
+}
+.row{
+    padding: 7px 40px;
+}
+.open-modal{
+    position: absolute;
+    top: 72.5%;
+    left: 0;
+}
+.open-modal button {
+    width: 100%;
+}
+.open-modal button + button{
+    margin-top: 10px;
+}
+.modal.fade .modal-dialog {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0, -5%);
+    -ms-transform: translate(0, -5%);
+    -o-transform: translate(0, -5%);
+    transform: translate(0, -5%);
+}

@@ -1,0 +1,88 @@
+body{
+    padding-top: 50px;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 13px;
+    color: white;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+.navbar-default{
+    background-color: #db1a1d;
+}
+.navbar-footer{
+    border: none;
+}
+.navbar-footer-div{
+    line-height: 50px;
+    height: 50px;
+}
+.navbar-footer-div button{
+    height: 100%;
+    width: 75px;
+    margin-left: 15px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.navbar .pager{
+    margin: 9px 0 9px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 50px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+[class^=col-xs-],
+[class*= col-xs-]{
+    padding: 4px 0 0;
+}
+.row > div{
+    padding-left: 0;
+    padding-right: 2px;
+}
+.row > div + div{
+    padding-left: 2px;
+    padding-right: 0;
+}
+.thumbnail{
+    border: none;
+    margin-bottom: 0;
+    background-color: #feefee;
+    padding: 0;
+}
+.thumbnail img{
+    width: 100%;
+}
+.caption > p:first-child{
+    font-size: small;
+    font-weight: 600;
+}
+.caption > p:last-child{
+    margin-bottom: 0;
+}
+.container{
+    position: relative;
+}
+.container .footer{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: #fff;
+    padding: 0 3px;
+}

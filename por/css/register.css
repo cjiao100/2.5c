@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-size: 15px;
+    /*background: rgba(253,91,76, 1);*/
+    /*background-image: url('../img/login/login_bj.png');*/
+	background: linear-gradient(130deg, #4a98cb, #f1a8d7 80%);
+	background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+}
+
+.group{
+	position: absolute;
+    bottom: 0;
+}
+.input-group{
+    width: 100%;
+    padding: 0 20px;
+}
+.input-group > input{
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.5);
+    /*margin-bottom: 2.9rem;*/
+    font-size: 1.8rem;
+    padding: 1.4rem 5.5rem;
+    width: 98.5%;
+    border-radius: 5rem;
+    text-align: left;
+}
+.input-group > input:last-child{
+	margin-bottom: 1.5rem;	
+}
+.input-group label:nth-of-type(1) img{
+	width: 3rem;
+	transform: translate(1.5rem, 4.2rem);
+}
+.input-group label:nth-of-type(2) img{
+	width: 10rem;
+	transform: translateY(4.3rem);
+}
+.input-group label:nth-of-type(3) img{
+	width: 10rem;
+	transform: translate(-1.8rem, 4.3rem);
+}
+.input-group label:nth-of-type(4) img{
+	width: 10rem;
+	transform: translate(-1.8rem, 4.3rem);
+}
+.input-group label:nth-of-type(5) img{
+	width: 10rem;
+	transform: translate(-3.5rem, 4.3rem);
+}
+.input-group > img{
+	position: absolute;
+	bottom: 0;
+	right: 2.5rem;
+	height: 5.5rem;
+	border-bottom-right-radius: 3rem;
+	border-top-right-radius: 3rem;
+}
+.input-group > .inter{
+	position: absolute;
+	right: 5rem;
+	bottom: 1.8rem;
+}
+.input-group > .inter button{
+	color: white;
+	background: transparent;
+	border: none;
+	text-decoration: underline;
+}
+.group button.btn{
+	margin-top: 3rem;
+	margin-bottom: 2.5rem;
+    font-size: 1.8rem;
+    padding: 1.4rem 5.5rem;
+    width: 98.5%;
+    border-radius: 5rem;
+    text-align: center;
+	background: linear-gradient(to right,
+        rgba(103, 138, 193, 0.52),
+        rgba(243, 135, 205, 0.52));
+    color: white;
+}
+.group .register p{
+	text-align: center;
+	color: white;
+}
+.group .register a{
+	color: black;
+}
+
+
+.input-group > input::-moz-placeholder{
+	color: #fff;
+}
+.input-group > input::-ms-input-placeholder{
+	color: #fff;
+}
+.input-group > input::-webkit-input-placeholder{
+	color: #fff;
+}

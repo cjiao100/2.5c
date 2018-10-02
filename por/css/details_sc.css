@@ -1,0 +1,79 @@
+body{
+    padding-top: 88px;
+}
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 50px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+.navbar .pager{
+    margin: 9px 0 9px;
+}
+.navbar-default{
+    background-color: #db1a1d;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 13px;
+    color: white;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+.navbar > .fy ul{
+    margin: 0  0 0 5%;
+    width: 90%;
+}
+[class^=col-xs-],
+[class*= col-xs-]{
+    padding: 0;
+}
+.navbar > .fy ul a{
+    width: 100%;
+    text-align: center;
+    border: none;
+}
+#wz, #bb{
+    display: none;
+}
+#gz img{
+    width: 55px;
+    border-radius: 100%;
+}
+.boz + .boz{
+    border-top: 1px solid #e0e0e0;
+}
+.media{
+    margin: 0;
+    padding: 10px 0;
+}
+#bb img{
+    width: 90px;
+}
+#bb .media-left{
+    padding: 0 20px 0 10px;
+}
+#bb .mes > p {
+	font-size: 15px;
+	height: 40px;
+	margin-bottom: 10px;
+}
+#wz > div{
+    position: relative;
+}
+#wz > div a{
+    position: absolute;
+    bottom: 6%;
+    right: 6%;
+}

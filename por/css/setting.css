@@ -1,0 +1,46 @@
+img{
+    height: 70px;
+}
+p{
+    margin: 0;
+}
+.navbar-default{
+    background-color: #db1a1d;
+}
+.navbar-brand span{
+    color: white;
+}
+#zh .list-group-item:first-child{
+    line-height: 70px;
+}
+#sh .list-group-item:first-child{
+    position: relative;
+}
+.bj{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+}
+.tjan a{
+    width: 100%;
+}
+input{
+    border: none;
+    outline: none;
+}
+#zh input{
+    text-align: right;
+}
+#zh, #sh, #bj{
+    display: none;
+}
+button{
+    width: 100%;
+}
+input[type="text"]:disabled{
+    background-color: #fff;
+}
+input[type="file"]{
+    display: none;
+}
