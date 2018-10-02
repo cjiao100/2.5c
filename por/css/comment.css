@@ -68,17 +68,30 @@ body{
 }
 
 /*评论详细页*/
+.child-comment{
+    display: none;
+}
+.child-comment.on{
+    display: inline-block;
+}
 .child-comment-content{
-    padding: 1rem 0;
+    padding: 1rem 0 0.8rem;
     /*font-size: 1rem ;*/
+    border-bottom: 1px solid #ddd;
 }
 .comment-user-img{
     height: 3rem;
     float: left;
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     /*margin-top: 0.3rem;*/
 }
 .comment-user-content p:first-child{
     margin-top: 0.2rem;
     margin-bottom: 0.1rem;
+}
+.comment-user-content .action span.pull-right button{
+    background-color: transparent;
+    border: 1px solid #888;
+    border-radius: 1rem;
+    color: #999;
 }
