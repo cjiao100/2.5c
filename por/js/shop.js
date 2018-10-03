@@ -17,11 +17,11 @@ $("#as").click(function () {
     let xq = document.querySelector('#image_xq');
 
     $.each(lb.files, function (index, img) {
-        sp_img.append('shopCoverImage', img);
+        sp_img.append('shopCoverImages', img);
         i++;
     });
     $.each(xq.files, function (index, img) {
-        sp_img.append('shopInformationImage', img);
+        sp_img.append('shopInformationImages', img);
         j++
     });
 
@@ -36,8 +36,8 @@ $("#as").click(function () {
         shopInformationImageNum: j
     };
     sp_img.append('shopInfoStr', JSON.stringify(shopInfoStr));
-    console.log(sp_img.getAll('shopCoverImage'));
-    console.log(sp_img.getAll('shopInformationImage'));
+    console.log(sp_img.getAll('shopCoverImages'));
+    console.log(sp_img.getAll('shopInformationImages'));
     console.log(i + ',' + j);
     console.log(sp_img);
     // 发送AJAX请求
@@ -52,6 +52,7 @@ $("#as").click(function () {
             withCredentials:true
         },
         success: function (xhr) {
+            console.log(xhr);
             if (xhr.success){
                 $("#back").trigger("click");
                 parameter = [];

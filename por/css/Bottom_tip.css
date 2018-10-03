@@ -1,0 +1,14 @@
+/*
+    这个CSS用于设置页面底部 提示结束
+*/
+.bottom{
+    position: relative;
+}
+.tip{
+    position: absolute;
+    top: -0.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 0 1rem;
+}

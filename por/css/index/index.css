@@ -31,6 +31,7 @@
     width: 100%;
     margin-top: 10px;
     height: 200px;
+    box-shadow: 0px 0.2rem 0.1rem 0.1rem #ccc;
 }
 .page-one > .container > .body-strip > p{
     font-size: large;
@@ -69,7 +70,7 @@
 }
 .page-one > .container > .body-strip > div > div{
     border-radius: 20px;
-    width: 130px;
+    width: 31%;
     height: 163px;
     margin: 0 5px;
     background-color: #ffffe5;
@@ -88,21 +89,24 @@
 .page-one > .container > .body-block > div{
     /*margin-top: px;*/
     width: 100%;
-    height: 200px;
+    height: 20rem;
+    padding: 1rem;
+    box-shadow: 0 0.3rem 1rem 0.1rem #f1f1f1;
     /*background-color: #a94442;*/
+}
+.tswz:last-child{
+    margin-bottom: 2rem;
 }
 .page-one > .container > .body-block > div > .tswz_img{
     overflow: hidden;
     width: 100%;
     height: 60%;
-    padding: 10px 10px 0;
     /*background-color: #1b6d85;*/
 }
 .page-one > .container > .body-block > div > .tswz_img > img{
     width: 100%;
 }
 .page-one > .container > .body-block > div > .tswz_ty{
-    padding: 0 10px 10px;
     height: 80px;
 }
 .page-one > .container > .body-block > div > .tswz_ty > div{

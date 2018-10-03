@@ -10,7 +10,7 @@ $("#aw").click(function () {
 
     //获取图片
     $.each(image_wz.files, function (index, img) {
-        article.append('postImage', img);
+        article.append('postImages', img);
         num++;
     });
 

@@ -51,14 +51,14 @@ body{
 .input-group > img{
 	position: absolute;
 	bottom: 0;
-	right: 2.5rem;
+	right: 2rem;
 	height: 5.5rem;
-	border-bottom-right-radius: 3rem;
-	border-top-right-radius: 3rem;
+	border-bottom-right-radius: 5rem;
+	border-top-right-radius: 5rem;
 }
 .cap_alt{
 	font-size: 1.5rem;
-	padding-top: 10%;
+	padding-top: 0.6rem;
 }
 .forget{
 	width: 100%;
