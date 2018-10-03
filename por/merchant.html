@@ -20,40 +20,46 @@
         </div>
     </nav>
 <div class="container">
-    <div>
+    <div class="merchant-mes">
         <p>基础信息</p>
         <div class="form-horizontal">
             <div class="form-group">
                 <label for="yourName" class="col-xs-3 control-label">联系人：</label>
-                <input id="yourName" type="text" class="col-xs-8 form-contro">
+                <input id="yourName" type="text" class="col-xs-8 form-control" placeholder="联系人姓名">
             </div>
             <div class="form-group">
-                <label for="yourPhone" class="col-xs-3 control-label">联系人电话：</label>
-                <input id="yourPhone" type="text" class="col-xs-8 form-contro">
+                <label for="yourPhone" class="col-xs-3 control-label">身份证号：</label>
+                <input id="yourNum" type="text" class="col-xs-8 form-control" placeholder="个人身份证号">
             </div>
             <div class="form-group">
-                <label for="yourAddress"  class="col-xs-3 control-label">联系人地址：</label>
-                <input id="yourAddress" type="text" class="col-xs-8 form-contro">
+                <label for="yourPhone" class="col-xs-3 control-label">电话：</label>
+                <input id="yourPhone" type="text" class="col-xs-8 form-control" placeholder="个人电话号/店铺电话">
+            </div>
+            <div class="form-group">
+                <label for="yourAddress"  class="col-xs-3 control-label">地址：</label>
+                <input id="yourAddress" type="text" class="form-control col-xs-8" placeholder="个人住址/实体店地址">
             </div>
         </div>
     </div>
-    <div>
-        <p>基础信息</p>
-        <div>
-            <div>
-                <input id="img1" type="file">
-                <label for="img1"></label>
+    <div class="merchant-img">
+        <p>请上传照片<span class="small"><strong>(如果您有实体店请上传店面图片以及营业执照)</strong></span></p>
+        <div class="form-horizontal">
+            <div class="form-group col-xs-4">
+                <input class="sr-only" id="img1" type="file">
+                <label for="img1">1</label>
             </div>
-            <div>
-                <input id="img2" type="file">
-                <label for="img2"></label>
+            <div class="form-group col-xs-4">
+                <input class="sr-only" id="img2" type="file">
+                <label for="img2">2</label>
             </div>
-            <div>
-                <input id="img3" type="file">
-                <label for="img3"></label>
+            <div class="form-group col-xs-4">
+                <input class="sr-only" id="img3" type="file">
+                <label for="img3">3</label>
             </div>
         </div>
     </div>
+
+    <button class="btn btn-submit btn-block">提交申请</button>
 </div>
 </body>
 </html>
