@@ -26,8 +26,9 @@
     text-align: center;
 }
 .jumbotron > div > img{
-    width: 100px;
+    width: 120px;
     margin-bottom: 10px;
+    clip-path: circle(40%);
 }
 .jumbotron p{
     font-size: 14px;
