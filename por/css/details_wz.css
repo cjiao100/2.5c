@@ -96,7 +96,7 @@ body{
     padding: 6px 30px 6px 12px;
     border: none;
     position: relative;
-    background: rgb(0,0,180);
+    background: rgba(180, 0, 15, 0.34);;
     color: white;
 }
 .wz-footer form button span{

@@ -44,8 +44,10 @@ body{
 .media img{
 	height: 100px;
 }
-.media h4{
-	font-weight: 900;
+.media .shop_name{
+	font-weight: 600;
+	height: 40px;
+	line-height: 20px;
 }
 .media-bottom{
 	position: relative;

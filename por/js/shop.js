@@ -194,7 +194,7 @@ function initMyShop(shopList) {
             '              <img src="'+ URL+shop.shopImageAddr +'" alt="" />\n' +
             '            </div>\n' +
             '            <div class="media-body">\n' +
-            '              <h4>'+ shop.shopName +'</h4>\n' +
+            '              <h4 class="font_setting shop_name">'+ shop.shopName +'</h4>\n' +
             '              <p class="small format">规格：'+ formats.toString() +'</p>\n' +
             '              <p><strong>￥'+ shop.price +'</strong></p>\n' +
             '            </div>\n' +

@@ -39,6 +39,7 @@
     left: 2px;
     line-height: 20px;
     padding-left: 0.5rem;
+    height: 40px;
 }
 .page-three > .zhoubian > .row > .sp > .sp-xx > span:last-child{
     position: absolute;
