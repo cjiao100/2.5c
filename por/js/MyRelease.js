@@ -30,16 +30,14 @@ $(".container").delegate("[name=del]", "click", function () {
             },
             success: function (xhr) {
                if (xhr.success){
-                   console.log(xhr);
+                   // console.log(xhr);
                    lump.remove();
-                   console.log(this);
+                   // console.log(this);
                }
             }
         });
     } else if (type === 'myWz'){
-        console.log(this);
         let postId = get_Id(this, '.lump');
-        console.log(postId);
         $.ajax({
             type: 'delete',
             url: URL+'/post/' + postId,
@@ -48,8 +46,9 @@ $(".container").delegate("[name=del]", "click", function () {
             },
             success: function (xhr) {
                 if (xhr.success){
-                    console.log(xhr);
-                    $(this).parents(".lump").remove();
+                    // console.log(xhr);
+                    // $(this).parents(".lump").remove();
+                    lump.remove();
                 }
             }
         });

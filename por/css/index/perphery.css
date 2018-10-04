@@ -18,7 +18,7 @@
     margin: 2.5%;
     width: 45%;
     padding: 0;
-    height: 200px;
+    height: 220px;
     text-align: center;
     box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
     border-radius: 0.5rem;
@@ -28,19 +28,21 @@
     max-width: 100%;
 }
 .page-three > .zhoubian > .row > .sp > .sp-xx{
-    height: 40px;
     width: 100%;
     line-height: 40px;
     position: relative;
     text-align: left;
 }
 .page-three > .zhoubian > .row > .sp > .sp-xx > span:first-child{
-    width: 80%;
+    width: 75%;
     position: absolute;
     left: 2px;
+    line-height: 20px;
+    padding-left: 0.5rem;
 }
 .page-three > .zhoubian > .row > .sp > .sp-xx > span:last-child{
     position: absolute;
     right: 2px;
     color: #a94442;
+    padding-right: 0.5rem;
 }

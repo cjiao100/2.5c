@@ -19,7 +19,7 @@
 				</div>
 				<div aria-label="Page navigation" class="fy">
 					<ul class="pagination">
-						<li class="col-xs-6"><a href="#">文章</a></li>
+						<li class="col-xs-6 active"><a href="#">文章</a></li>
 						<li class="col-xs-6"><a href="#">商品</a></li>
 					</ul>
 				</div>
@@ -146,6 +146,7 @@
 				$(".pagination li").click(function () {
 		            let lix = $(this).index();
 		            $("#release > div").eq(lix).show().siblings("div").hide();
+                    $(this).addClass('active').siblings('li').removeClass('active');
 		        });
 
 				//进去发布页面
@@ -164,21 +165,27 @@
 				$("#back").click(function () {
                     $("#release").show();
                     $("#add_sp").hide();
-//                    tdelete($('tbody'));
                     $("#sp-name").val("");
                     $("#sp-price").val("");
                     $("#format").val("");
                     $("#sort").text("请选择分类");
-                    tdelete($("tbody"));
-                    initShop();
                     $("#bj_sp").remove();
                     $("#as").show();
+
+                    tdelete($("tbody"));
+                    initShop();
+                    initArticle();
                 });
                 $("#back-wz").click(function () {
                     $("#release").show();
                     $("#add_wz").hide();
                     $("#wz-name").val("");
                     $("#wz-article").val("");
+                    $("#bj_wz").remove();
+                    $("#aw").show();
+
+                    initShop();
+                    initArticle();
                 });
 
                 // 编辑界面的设置

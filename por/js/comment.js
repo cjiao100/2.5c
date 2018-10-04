@@ -36,7 +36,7 @@ function Comment(ComList) {
             '    </div>');
 
         // if ()
-        console.log(Content.childrenCommentList);
+        // console.log(Content.childrenCommentList);
 
         $('#comment-nav').after(comment);
     })

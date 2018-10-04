@@ -33,7 +33,7 @@ $("#aw").click(function () {
             withCredentials:true
         },
         success: function (xhr) {
-            console.log(xhr);
+            // console.log(xhr);
             if (xhr.success){
                 $("#back-wz").trigger('click');
             }
@@ -45,6 +45,8 @@ $("#aw").click(function () {
 /*******************************文章中需要的函数******************************************/
 
 function initArticle() {
+    $(".lump").remove();
+
     $.ajax({
         type: 'get',
         url: URL+'/post/myPost',
@@ -53,7 +55,7 @@ function initArticle() {
         },
         success: function (xhr) {
             if (xhr.success){
-                console.log(xhr.data);
+                // console.log(xhr.data);
                 initMyArticle(xhr.data);
             }
         }
@@ -65,7 +67,7 @@ function initMyArticle(postList) {
         let $wz = $('<div class="thumbnail lump" data-id="'+ post.postId+'">\n' +
             '            <img src="'+ URL + post.postImageAddr +'">\n' +
             '            <div class="caption clearfix">\n' +
-            '              <div style="display: inline-block">' +
+            '              <div class="article_mes">' +
             '                 <h4>'+ post.postTitle +'</h4>\n' +
             '                 <p class="small" data-userId="'+ post.userInfo.userId +'"> 笔者：'+ post.userInfo.nickName   +'</p>\n' +
             '              </div>' +

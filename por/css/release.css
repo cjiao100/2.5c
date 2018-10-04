@@ -26,6 +26,11 @@ body{
 	border-radius: 20px;
 	margin-top: 20px;
 }
+.caption .article_mes{
+	width: 65%;
+	display: inline-block;
+
+}
 .caption p{
 	text-overflow: ellipsis;
 	height: 15px;

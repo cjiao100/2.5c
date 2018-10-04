@@ -165,8 +165,8 @@ function process_parameter(table){
 
 //初始化商品发布页面
 function initShop() {
-    // console.log(URL);
     $(".lump").remove();
+
     $.ajax({
         type: 'get',
         url: URL+'/shop/myShop',
@@ -175,7 +175,7 @@ function initShop() {
         },
         success: function (xhr) {
             if (xhr.success){
-                console.log(xhr.data);
+                // console.log(xhr.data);
                 initMyShop(xhr.data)
             }
         }

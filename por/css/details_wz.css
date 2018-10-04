@@ -10,6 +10,7 @@ body{
     font-size: 14px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-bottom: 25px;
+    padding-top: 50px;
 }
 .panel-body > p{
 	text-indent: 2rem;

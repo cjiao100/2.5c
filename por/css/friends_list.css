@@ -22,3 +22,10 @@ img{
 #newF{
     display: none;
 }
+#newF .button{
+    float: right;
+}
+#newF .button .btn:first-child{
+    background: transparent;
+    color: #a1a1a1;
+}

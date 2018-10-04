@@ -30,19 +30,22 @@ function getShop(index, size, shopName, shopCategoryId, num) {
         }
     });
 }
+
+// 周边页面的
 function createShop(shopList) {;
     $(shopList).each(function (index, shop) {
         // console.log(shopList[index].shopImageList[0].imageAddr);
         let shopBlock = $('<div class="sp col-xs-5" data-shopId="'+ shop.shopId +'">\n' +
             '                    <img src="'+ URL + shop.shopImageList[0].imageAddr +'">\n' +
             '                    <div class="sp-xx">\n' +
-            '                        <span class="font_setting font_nowrap">'+ shop.shopName +'</span>\n' +
+            '                        <span class="font_setting">'+ shop.shopName +'</span>\n' +
             '                        <span>￥'+ shop.price +'</span>\n' +
             '                    </div>\n' +
             '                </div>');
         $("#shopRow").append(shopBlock);
     })
 }
+// 分类页面的
 function createSortShop(sortShopList) {
     $(sortShopList).each(function (index, shop) {
         let shopBlock = $('<div class="col-xs-6" data-shopId="'+ shop.shopId +'">\n' +
@@ -57,6 +60,7 @@ function createSortShop(sortShopList) {
         $("#sortShopList").append(shopBlock);
     })
 }
+// 首页精选
 function createIndexShop(ShopList) {
     $(ShopList).each(function (index, shop) {
         // console.log(shop);

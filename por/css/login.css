@@ -12,6 +12,12 @@ body{
     background-size: 100% 100%;
 }
 
+.container > img{
+	width: 200px;
+	position: relative;
+	top: 3.5rem;
+	left: 7rem;
+}
 .group{
 	position: absolute;
     bottom: 0;

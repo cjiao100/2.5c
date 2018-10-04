@@ -17,8 +17,8 @@ $(function () {
 function postDetails(post) {
     let Content = post.postContent.replace(/\n/g, '<br>');
 
-    console.log(post.postContent);
-    console.log(Content);
+    /*console.log(post.postContent);
+    console.log(Content);*/
 
     $("#nav_title").text(post.postTitle);
     $("#post_title").text(post.postTitle);
