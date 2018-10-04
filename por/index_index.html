@@ -94,14 +94,25 @@
             <a data-target="page-fiv"><span class="small">我的</span></a>
         </div>
     </div>
+
+    <!--搜索界面-->
     <div class="search">
-        <!--搜索界面-->
-        <form class="input-group">
-            <div class="form-group">
-                <label for="search" class="sr-only">search</label>
-                <input type="text" class="input-sm bar" id="search" placeholder="search..">
-            </div>
-        </form>
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button id="search_style" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-style="0" aria-haspopup="true" aria-expanded="false">
+                    <span>商品</span><span class="caret"></span>
+                </button>
+                <ul id="search_sort" class="dropdown-menu">
+                    <li data-style="0"><a href="#">商品</a></li>
+                    <li data-style="1"><a href="#">文章</a></li>
+                    <li data-style="2"><a href="#">用户</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control" id="search_content" placeholder="search..">
+            <span class="input-group-btn">
+                <button id="search_" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div><!-- /input-group -->
         <div id="b"></div>
     </div>
     <script src="dist/jquery-3.3.1.js"></script>

@@ -24,55 +24,92 @@ input:active, input:focus{
     outline: none;
 }
 
+/*商品*/
+.row:first-child{
+    margin-top: 50px;
+}
+.row{
+    padding: 0 15px 0;
+    /*background-color: #f8f8f8;*/
+}
+.row > .sp{
+    margin: 2.5%;
+    width: 45%;
+    padding: 0;
+    height: 220px;
+    text-align: center;
+    box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+.row > .sp > img{
+    height: 80%;
+    max-width: 100%;
+}
+.row > .sp > .sp-xx{
+    width: 100%;
+    line-height: 40px;
+    position: relative;
+    text-align: left;
+}
+.row > .sp > .sp-xx > span:first-child{
+    width: 72%;
+    position: absolute;
+    left: 2px;
+    line-height: 20px;
+    padding-left: 0.5rem;
+    height: 40px;
+}
+.row > .sp > .sp-xx > span:last-child{
+    position: absolute;
+    right: 2px;
+    color: #a94442;
+    padding-right: 0.5rem;
+}
+
 /*文章*/
-.posts{
+.body-block{
     margin-top: 10px;
     width: 100%;
-    background-color: #fff;
 }
-.posts > .post{
+.body-block > div{
+    /*margin-top: px;*/
     width: 100%;
-    height: 190px;
+    height: 20rem;
+    padding: 1rem;
+    box-shadow: 0 0.3rem 1rem 0.1rem #f1f1f1;
+    /*background-color: #a94442;*/
 }
-.tswz_img{
+.tswz:last-child{
+    margin-bottom: 2rem;
+}
+.body-block > div > .tswz_img{
     overflow: hidden;
     width: 100%;
     height: 60%;
-    padding: 10px 10px 0;
+    /*background-color: #1b6d85;*/
 }
-.tswz_img > img{
+.body-block > div > .tswz_img > img{
     width: 100%;
 }
-.tswz_ty{
-    padding: 0 10px 10px;
-    height: 60px;
+.body-block > div > .tswz_ty{
+    height: 80px;
 }
-.tswz_ty > div{
-    background-color: #F8F8F8;
+.body-block > div > .tswz_ty > div{
+    background-color: #faebdc;;
     height: 100%;
+    padding: 10px;
 }
-.tswz_ty > div > p{
+.body-block > div > .tswz_ty > div > p{
     font-size: medium;
 }
 
-.media{
-	background: rgb(248,248,248);
-	padding: 5px;
+/*用户*/
+#myFriendList img{
+    width: 45px;
+    height: 45px;
+    margin-right: 10px;
 }
-.media-heading{
-	font-size: 15px;
-}
-.media-middle img{
-	width: 80px;
-}
-.media-left{
-	padding-right: 20px;
-}
-.media-body{
-	padding: 5px 0;
-}
-.media-body p{
-	line-height: 20px;
-	height: 40px;
-	margin-bottom: 5px;
+#myFriendList .list-group-item span{
+    font-size: x-large;
+    vertical-align: middle;
 }

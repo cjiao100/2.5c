@@ -48,3 +48,17 @@ $("#mesr").click(function () {
 $("#my").click(function () {
    window.location.href = "index_my.html"
 });
+
+// 选择搜索的类型
+$('#search_sort li').click(function () {
+    let style = $(this).data('style');
+    $("#search_style span:first-child").text($(this).text());
+    $("#search_style").data('style', style);
+});
+
+// 搜索
+$("#search_").click(function () {
+    let style = $("#search_style").data('style');
+    let content = $("#search_content").val();
+    window.location.href = 'search.html?style=' + style + '&content=' + content;
+})

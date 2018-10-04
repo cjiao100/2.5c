@@ -17,16 +17,16 @@ function getPost(index, size, postTitle, postContent) {
             if (xhr.success){
                 if (postContent === null || postTitle === null){
                 	window.localStorage.setItem('indexPost', JSON.stringify(xhr.data));
-                    createIndexPost(xhr.data);
+                    createPost(xhr.data);
                 } else {
-                    
+                    createPost(xhr.data);
                 }
             }
         }
     });
 }
 
-function createIndexPost(postList) {
+function createPost(postList) {
     let posts = postList.postList;
     $(posts).each(function (index, post) {
         let postBlock = $('<div class="tswz" data-postId="'+ post.postId +'" >\n' +

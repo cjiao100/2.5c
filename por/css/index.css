@@ -25,6 +25,7 @@ a:focus,input:focus{
     }
 }
 
+
 /*页面设置*/
 .page {
     width: 100%;
@@ -179,27 +180,31 @@ a:focus,input:focus{
     top: 0;
     z-index: 10010;
 }
-form{
-    width: 100%;
-    padding: 10px;
-    /*background-color: #db1a1d;*/
+.search .input-group{
+    padding: 0.5rem;
 }
-.form-group{
-    margin-bottom: 0;
+.search .input-group button{
+    background-color: #fff;
 }
-.bar{
-    border-radius: 20px;
+.search button{
+    height: 3.25rem;
+    background-color: #ff5555;
     border: none;
-    /*border-bottom-left-radius: 20px;*/
-    width: 100%;
+}
+.search input{
+    height: 3.25rem;
 }
 
-
-a .active{
+.form-control{
     border: none;
-    color: #db1a1d;
-    background: none;
 }
-a:hover, a:focus {
-    color: rgba(255, 182, 193, 0.55);
+.form-control:focus{
+    border: none;
+    box-shadow: none;
 }
+
+.open > .dropdown-toggle.btn-default, .open > .dropdown-toggle.btn-default:hover{
+    background-color: white;
+    border: none;
+}
+

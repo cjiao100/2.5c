@@ -1,5 +1,5 @@
 function getShop(index, size, shopName, shopCategoryId, num) {
-    console.log(num);
+    // console.log(num);
     let para;
     if (shopName === null && shopCategoryId === null){
         para = 'pageIndex='+ index +'&pageSize='+ size;
@@ -8,7 +8,10 @@ function getShop(index, size, shopName, shopCategoryId, num) {
     } else if (shopName !== null && shopCategoryId === null){
         para = 'shopName='+ shopName +'&pageIndex='+ index +'&pageSize=' + size;
     }
-    // console.log(para);
+    /*console.log(index);
+    console.log(size);
+    console.log(shopName);
+    console.log(para);*/
     $.ajax({
         type: 'get',
         url: URL + '/shop?' + para,
@@ -32,7 +35,8 @@ function getShop(index, size, shopName, shopCategoryId, num) {
 }
 
 // 周边页面的
-function createShop(shopList) {;
+function createShop(shopList) {
+    console.log(shopList);
     $(shopList).each(function (index, shop) {
         // console.log(shopList[index].shopImageList[0].imageAddr);
         let shopBlock = $('<div class="sp col-xs-5" data-shopId="'+ shop.shopId +'">\n' +
@@ -42,6 +46,7 @@ function createShop(shopList) {;
             '                        <span>￥'+ shop.price +'</span>\n' +
             '                    </div>\n' +
             '                </div>');
+        console.log('1');
         $("#shopRow").append(shopBlock);
     })
 }
