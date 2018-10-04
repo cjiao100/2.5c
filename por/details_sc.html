@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/bootstrap.css">
     <link rel="stylesheet" href="css/details_sc.css">
+    <link rel="stylesheet" href="css/tool/nav.css">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <ul class="pager navbar-left">
-                <li class="previous"><a id="back"><span aria-hidden="true">&larr;</span></a></li>
+                <li class="previous"><a id="back"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
             </ul>
             <h3 class="navbar-text navbar-title"><strong>我的</strong></h3>
         </div>
@@ -121,20 +122,31 @@
     </div>
 <script src="dist/jquery-3.3.1.js"></script>
 <script src="dist/bootstrap.js"></script>
+<script src="js/tool/get_url.js"></script>
 <script>
 	'use strict';
     $(function () {
-        $(".pagination li").click(function () {
-            let lix = $(this).index();
-            $("body > div").eq(lix).show().siblings("div").hide();
-        });
-        let url = '#' + window.location.search.substr(4);
+        let $pl = $(".pagination li");
+        let url = '#' + $.getUrlParam('pg');
         $(url).show().siblings("div").hide();
-
-        $("#back").click(function () {
-            window.history.back();
-        })
+        switch (url) {
+            case '#bb':
+                $pl.eq(1).addClass('active');
+                break;
+            case '#gz':
+                $pl.eq(0).addClass('active');
+        }
     });
+
+    $(".pagination li").click(function () {
+        $(this).addClass('active').siblings('li').removeClass('active');
+        let lix = $(this).index();
+        $("body > div").eq(lix).show().siblings("div").hide();
+    });
+
+    $("#back").click(function () {
+        window.history.back();
+    })
 </script>
 </body>
 </html>

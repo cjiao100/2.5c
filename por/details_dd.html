@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="dist/bootstrap.css">
     <link rel="stylesheet" href="css/details_dd.css">
     <link rel="stylesheet" type="text/css" href="css/tool/fontSetting.css"/>
+    <link rel="stylesheet" href="css/tool/nav.css">
 </head>
 <body>
 <!--
@@ -22,13 +23,13 @@
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <ul class="pager navbar-left">
-                    <li class="previous"><a href="index_my.html"><span aria-hidden="true">&larr;</span></a></li>
+                    <li class="previous"><a href="index_my.html"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
                 </ul>
                 <h3 class="navbar-text navbar-title"><strong>购物详细</strong></h3>
             </div>
             <div aria-label="Page navigation" class="fy">
                 <ul class="pagination">
-                    <li class="col-xs-4"><a href="#">购物车</a></li>
+                    <li class="col-xs-4 active"><a href="#">购物车</a></li>
                     <li class="col-xs-4"><a href="#">购买记录</a></li>
                     <li class="col-xs-4"><a href="#">物流详情</a></li>
                 </ul>
@@ -128,7 +129,7 @@
         <nav class="navbar navbar-static-top navbar-default">
             <div class="container">
                 <ul class="black pager navbar-left">
-                    <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span></a></li>
+                    <li class="previous"><a href="#"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
                 </ul>
                 <h3 class="navbar-text navbar-title"><strong>物流</strong></h3>
             </div>
@@ -158,6 +159,7 @@
         $(".pagination li").click(function () {
             let lix = $(this).index();
             $(".gwxx > div").eq(lix).show().siblings("div").hide();
+            $(this).addClass('active').siblings('li').removeClass('active');
         });
         $(".wl-media").click(function () {
             $(".gwxx").hide();

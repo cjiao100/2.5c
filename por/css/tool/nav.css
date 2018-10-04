@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+    .navbar-text {
+        float: left;
+        height: 50px;
+    }
+    .navbar-left {
+        float: left !important;
+    }
+    .navbar-right {
+        float: right !important;
+    }
+}
+.navbar .pager{
+    margin: 9px 0 9px;
+}
+.pager li > a{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+.pager li > a:hover{
+    background: #ee5050;
+}
+.navbar > div{
+    position: relative;
+}
+.navbar .navbar-text{
+    margin-top: 13px;
+    color: white;
+}
+.navbar .navbar-title{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+.navbar > .fy ul{
+    margin: 0  0 0 5%;
+    width: 90%;
+}
+.navbar [class^=col-xs-],
+.navbar [class*= col-xs-]{
+    padding: 0;
+}
+.navbar > .fy ul a{
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: #ff5555;
+    border-radius: 0;
+    color: #f2f2f2;
+}
+.navbar > .fy ul li.active{
+    color: white;
+    border-bottom: 0.2rem solid white;
+}
+.pagination > .active > a,
+.pagination > .active > a:hover,
+.pagination > .active > a:focus{
+    background-color: transparent;
+    border: none;
+}
+.pagination > li > a:hover{
+    color: white;
+}

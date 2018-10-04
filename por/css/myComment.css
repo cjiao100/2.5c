@@ -1,0 +1,54 @@
+body{
+    padding-top: 88px;
+    /*background-color: #f2f2f2;*/
+}
+/*每条评论的设置*/
+.comment{
+    box-shadow: 0 1rem 0 0 #f2f2f2;
+}
+.comment .panel{
+    margin-bottom: 1rem;
+}
+.panel-default > .panel-heading{
+    background-color: #fff;
+    border: none;
+    padding-bottom: 0.2rem;
+}
+.panel-default > .panel-heading p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.panel-content{
+    margin-left: 2rem;
+    border-left: 0.2rem solid #efefef;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    color: #b8b8b8;
+    font-size: 1.2rem;
+}
+.panel-content p{
+    margin: 0;
+}
+.panel-footer{
+    background-color: #fff;
+    padding-top: 0.2rem;
+    font-size: 0.1rem;
+    color: #b8b8b8;
+    border: none;
+}
+.panel-footer span:nth-child(2){
+    float: right;
+}
+
+
+/*底部提示信息*/
+.bottom{
+    padding-top: 1rem;
+}
+.bottom .tip{
+    top: 1.7rem;
+}
+
+#put{
+    display: none;
+}

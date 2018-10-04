@@ -1,50 +1,6 @@
 body{
-	padding-top: 88px;
+	padding-top: 80px;
 }
-@media screen and (max-width: 768px) {
-    .navbar-text {
-        float: left;
-        height: 50px;
-    }
-    .navbar-left {
-        float: left !important;
-    }
-    .navbar-right {
-        float: right !important;
-    }
-}
-.pager{
-	margin: 9px 0 9px;
-}
-.navbar > div{
-    position: relative;
-}
-.navbar .navbar-text{
-    margin-top: 13px;
-}
-.navbar .navbar-title{
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-	color: white;
-}
-.navbar-default{
-	background-color: #db1a1d;
-}
-.navbar > .fy ul{
-    margin: 0  0 0 5%;
-    width: 90%;
-}
-[class^=col-xs-],
-[class*= col-xs-]{
-    padding: 0;
-}
-.navbar > .fy ul a{
-    width: 100%;
-    text-align: center;
-    border: none;
-}
-
 .btn-primary{
 	background-color: #337ab796;
 	border: none;

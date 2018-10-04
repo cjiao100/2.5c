@@ -1,52 +1,24 @@
 body{
     padding-top: 50px;
 }
-a:focus,input:focus,button:focus{
-    outline-offset: 0;
-    outline: -webkit-focus-ring-color auto 0;
-}
-@media screen and (max-width: 768px) {
-    .navbar-text {
-        float: left;
-        height: 50px;
-    }
-    .navbar-left {
-        float: left !important;
-    }
-    .navbar-right {
-        float: right !important;
-    }
-}
-.navbar .pager{
-    margin: 9px 0 9px;
-}
-.navbar > div{
-    position: relative;
-}
-.navbar .navbar-text{
-    margin-top: 13px;
-}
-.navbar .navbar-title{
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-    color: white;
-}
-.navbar .navbar-form{
-    border: none;
-    margin: 0;
-    padding: 8px;
-    width: 80%;
-}
-.navbar-default{
-    background-color: #db1a1d;
-}
 img{
     width: 45px;
     height: 45px;
     margin-right: 10px;
 }
 .list-group-item span{
-    font-size: x-large;
-    vertical-align: middle;
+     font-size: x-large;
+     vertical-align: middle;
+}
+.newFriends .list-group-item{
+    border: none;
+    border-bottom: 0.1rem solid #ccc;
+    border-radius: 0;
+    box-shadow: 0 0.01rem 0.5rem 0 #ccc;
+}
+.newFriends .list-group-item span{
+    font-size: 1.5rem;
+}
+#newF{
+    display: none;
 }

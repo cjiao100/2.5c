@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/index/perphery.css">
     <link rel="stylesheet" href="css/tool/fontSetting.css">
+    <link rel="stylesheet" href="css/tool/Bottom_tip.css">
 </head>
 <body>
     <div id="page-thr" class="page page-three">
@@ -36,11 +37,15 @@
             <a href="index_my.html" data-target="page-fiv"><span class="small">我的</span></a>
         </div>
     </div>
+    <div class="bottom">
+        <hr>
+        <p class="tip">到底了</p>
+    </div>
     <script src="dist/jquery-3.3.1.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/por.js"></script>
-    <script src="js/getShop.js"></script>
-    <script src="js/getSort.js"></script>
+    <script src="js/tool/por.js"></script>
+    <script src="js/tool/getShop.js"></script>
+    <script src="js/tool/getSort.js"></script>
     <script type="text/javascript">
         $(function () {
             let allShop = JSON.parse(window.localStorage.getItem('allShop'));

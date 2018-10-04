@@ -6,59 +6,8 @@
     padding-top: 95px;
     padding-bottom: 50px;
 }
-.navbar-default{
-    background-color: #db1a1d;
-}
-.navbar-default .navbar-text{
-    color: white;
-}
-/*input[type=checkbox] {*/
-    /*visibility: hidden;*/
-    /*margin: 0;*/
-/*}*/
-.navbar .pager{
-    margin: 9px 0 9px;
-}
-.media{
-    padding: 5%;
-    background-color: #ddd;
-}
-.media-body{
-    padding-top: 10px;
-}
-@media screen and (max-width: 768px) {
-    .navbar-text {
-        float: left;
-        height: 50px;
-    }
-    .navbar-left {
-        float: left !important;
-    }
-    .navbar-right {
-        float: right !important;
-    }
-}
 img{
     width: 90px;
-}
-.navbar > div{
-    position: relative;
-}
-.navbar .navbar-text{
-    margin-top: 13px;
-}
-.navbar .navbar-title{
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%);
-}
-.navbar > .fy ul{
-    margin: 0  0 0 5%;
-    width: 90%;
-}
-[class^=col-xs-],
-[class*= col-xs-]{
-    padding: 0;
 }
 .navbar > .fy ul a{
     width: 100%;
@@ -139,9 +88,12 @@ img{
 .wl .navbar{
     margin-bottom: 0;
 }
+.media{
+    background-color: #ddd;
+    padding: 0.5rem;
+}
 .wl .media-body, .media-left{
     position: relative;
-    background-color: #ddd;
     vertical-align: middle;
     
 }

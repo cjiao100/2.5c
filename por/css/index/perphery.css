@@ -20,6 +20,8 @@
     padding: 0;
     height: 200px;
     text-align: center;
+    box-shadow: 0 0.2rem 0.5rem 0.1rem rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
 }
 .page-three > .zhoubian > .row > .sp > img{
     height: 80%;
