@@ -1,23 +1,25 @@
 // 获取用户信息
 function getUser(userId){
-    let userMes = {};
-
-$.ajax({
-	url: URL + '/user/' + userId,
-	type: 'get',
-	xhrFields: {
-		withCredentials: true
-	},
-	success: function (xhr) {
-		if (xhr.success) {
-			userMes.userName = xhr.data.nickName;
-			userMes.headerImg = xhr.data.headImage;
-			userMes.phone = xhr.data.phone;
+	let user = {};
+	
+	$.ajax({
+		url: URL + '/user/' + userId,
+		type: 'get',
+		async:false,
+		xhrFields: {
+			withCredentials: true
+		},
+		success: function (xhr) {
+			if (xhr.success) {
+				console.log(xhr.data);
+				user = xhr.data;
+			}
 		}
-	}
-});
-console.log(userMes);
-return userMes;
+	});
+	
+	console.log(user.nickName);
+	
+	return user;
 }
 
 // 获取搜索用户列表的AJAX
@@ -60,9 +62,11 @@ function getUserList(status, index) {
         success: function(xhr) {
             if (xhr.success) {
                 if (status === 0) {
+					console.log(xhr);
                     createNewUser(xhr.data);
                 } else if (status === 1) {
-                    createUser(xhr.data);
+					console.log(xhr);
+					createUser(xhr.data);
                 }
             }
         }
@@ -71,7 +75,9 @@ function getUserList(status, index) {
 
 // 搜索好友以及获取好友列表
 function createUser(friendList) {
-    $.each(friendList, function (index, item) {
+	console.log(friendList);
+	$.each(friendList, function (index, item) {
+		// console.log(item);
         let friend = $('<li class="list-group-item" data-userid="'+ item.userId +'">\n' +
             '            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
             '            <span>'+ item.nickName +'</span>\n' +
@@ -82,16 +88,19 @@ function createUser(friendList) {
 }
 // 获取新朋友列表
 function createNewUser(friendList) {
-    $.each(friendList, function (index, item) {
-        let newfriend = $('<li class="list-group-item" data-userid="'+ item.userId +'">\n' +
-            '            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
-            '            <span>'+ item.nickName +'</span>\n' +
-            '            <div class="button">\n' +
-            '                <button class="btn" data-select="0">拒绝</button>\n' +
-            '                <button class="btn btn-primary" data-select="1">同意</button>\n' +
-            '            </div>' +
-            '        </li>');
-
-        $('#newFriendList').append(newfriend);
+	console.log(friendList);
+	$.each(friendList.friendList, function (index, item) {
+		if (item.userVO.sender === 0){
+			let newfriend = $('<li class="list-group-item" data-userId="'+ item.userVO.userId +'">\n' +
+				'            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
+				'            <span>'+ item.userVO.nickName +'</span>\n' +
+				'            <div class="button">\n' +
+				'                <button class="btn" data-select="false">拒绝</button>\n' +
+				'                <button class="btn btn-primary" data-select="true">同意</button>\n' +
+				'            </div>' +
+				'        </li>');
+			
+			$('#newFriendList').append(newfriend);
+		}
     })
 }

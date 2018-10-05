@@ -19,7 +19,7 @@ function getShop(index, size, shopName, shopCategoryId, num) {
             // console.log(xhr);
             if (xhr.success){
                 if (shopCategoryId === null){
-                	window.localStorage.setItem('allShop', JSON.stringify(xhr.data));
+					window.localStorage.setItem('allShop', JSON.stringify(xhr.data));
                     createShop(xhr.data);
                 } else {
                     if (num === 1){

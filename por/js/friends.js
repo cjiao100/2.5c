@@ -1,8 +1,8 @@
 'use strict';
 $(function () {
     // 获取好友列表
-    getUserList(1, 1);
-    getUserList(0, 1);
+	getUserList(1, ID);
+	getUserList(0, ID);
 });
 
 
@@ -21,6 +21,23 @@ $(".newFriends").click(function () {
     } else {
         $("#prompt").text("新朋友").data("type", 0);
     }
+});
+
+$("#newFriendList").delegate('.button > button', 'click', function () {
+	console.log(this);
+	let friendId = $(this).parents('li').data('userid');
+    let agree = $(this).data('select');
+    
+    $.ajax({
+        url: URL + '/user/addFriend/' + friendId + '?agree=' + agree,
+        type: 'post',
+		xhrFields: {
+			withCredentials:true
+		},
+		success: function (xhr) {
+			console.log(xhr);
+		}
+    })
 });
 
 

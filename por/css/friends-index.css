@@ -1,3 +1,6 @@
+body{
+    padding-bottom: 50px;
+}
 a{
     color: black;
 }
@@ -28,18 +31,21 @@ a:focus,input:focus,button:focus{
 }
 
 /*页面内标签页*/
+.navbar > .fy ul{
+    padding-top: 0.3rem;
+}
 .navbar > .fy ul a{
-    background-color: rgba(252,248,227,0.67);
+    background-color: transparent;
     line-height: 3.5rem;
     padding: 0;
     color: #b99b9b;
     font-size: 1.7rem;
     font-weight: 600;
 }
-
 /*加好友或聊天*/
 .row{
     padding: 7px 40px;
+    background-color: #fcf8e3;
 }
 
 /*好友设置*/
@@ -77,4 +83,74 @@ a:focus,input:focus,button:focus{
     position: absolute;
     bottom: 0;
     width: 95%;
+}
+
+/*商品和文章样式设置*/
+.caption h3{
+    margin: 0 0 10px;
+}
+.caption .btn-group{
+    float: right;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.caption .article_mes{
+    width: 65%;
+    display: inline-block;
+
+}
+.caption p{
+    text-overflow: ellipsis;
+    height: 15px;
+    overflow: hidden;
+    white-space:nowrap;
+}
+.media{
+    background-color: #ffc0cb63	;
+    padding: 10px;
+}
+.media img{
+    height: 100px;
+}
+.media .shop_name{
+    font-weight: 600;
+    height: 40px;
+    line-height: 20px;
+}
+.media-bottom{
+    position: relative;
+}
+.media-bottom .btn-group{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 20px;
+}
+
+#shop{
+    display: none;
+}
+
+/*toast设置*/
+#snackbar{
+    bottom: 5rem;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 5rem; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 5rem; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 5rem; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 5rem; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
 }

@@ -148,7 +148,7 @@ function process_format(formats){
 }
 //处理参数
 function process_parameter(table){
-    let parameter = new Array();
+    let parameter = [];
     table.find("tr").each(function(i,e){
         let key = $(e).find("td").eq(0).children().val();
         let val = $(e).find("td").eq(1).children().val();
@@ -169,7 +169,7 @@ function initShop(id) {
 
     $.ajax({
         type: 'get',
-        url: URL+'/shop/myShop/' + Id,
+        url: URL+'/shop/myShop/' + id,
         xhrFields:{
             withCredentials:true
         },
@@ -184,7 +184,7 @@ function initShop(id) {
 //创建我的商品界面的商品
 function initMyShop(shopList) {
     $(shopList).each(function (index, shop) {
-        let formats = new Array();
+        let formats = [];
         $.each(shop.shopSpecificationList, function (index, format) {
             formats.push(format);
         });

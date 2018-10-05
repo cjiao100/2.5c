@@ -1,9 +1,8 @@
 $(function () {
 	let sort = JSON.parse(window.localStorage.getItem('sort'));
-	let myId = window.localStorage.getItem('myId');
 	
-    initArticle(myId);
-    initShop(myId);
+    initArticle(ID);
+    initShop(ID);
     
     if (sort==="" || sort===null){
     	getSort(1);
