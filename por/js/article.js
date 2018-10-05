@@ -44,12 +44,11 @@ $("#aw").click(function () {
 
 /*******************************文章中需要的函数******************************************/
 
-function initArticle() {
+function initArticle(id) {
     $(".lump").remove();
-
     $.ajax({
         type: 'get',
-        url: URL+'/post/myPost',
+        url: URL+'/post/myPost/' + id,
         xhrFields:{
             withCredentials:true
         },

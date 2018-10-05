@@ -21,12 +21,57 @@
         <hr>
 
     </div>
+    <!--搜索界面-->
+    <div class="search">
+        <div class="input-group">
+            <div class="input-group-btn">
+                <button id="search_style" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" data-style="0" aria-haspopup="true" aria-expanded="false">
+                    <span>商品</span><span class="caret"></span>
+                </button>
+                <ul id="search_sort" class="dropdown-menu">
+                    <li data-style="0"><a href="#">商品</a></li>
+                    <li data-style="1"><a href="#">文章</a></li>
+                    <li data-style="2"><a href="#">用户</a></li>
+                </ul>
+            </div><!-- /btn-group -->
+            <input type="text" class="form-control" id="search_content" placeholder="search..">
+            <span class="input-group-btn">
+                <button id="search_" class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+            </span>
+        </div><!-- /input-group -->
+        <div id="b"></div>
+    </div>
     <script type="text/javascript" src="dist/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="js/tool/por.js"></script>
     <script type="text/javascript" src="js/tool/get_url.js"></script>
     <script type="text/javascript" src="js/tool/getPost.js"></script>
     <script type="text/javascript" src="js/tool/getShop.js"></script>
-    <script type="text/javascript" src="js/tool/getUser.js"></script>
+    <script type="text/javascript" src="js/tool/getUserList.js"></script>
     <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript">
+        $("[name='search']").click(function () {
+            let y = $(window).height()-50;
+            $("#b").css("height", y);
+            $(".search").fadeIn("100");
+            $("#search_content").trigger("click").focus();
+        });
+        $("#b").click(function () {
+            $(".search").fadeOut("100");
+        })
+
+        // 选择搜索的类型
+        $('#search_sort li').click(function () {
+            let style = $(this).data('style');
+            $("#search_style span:first-child").text($(this).text());
+            $("#search_style").data('style', style);
+        });
+
+        // 搜索
+        $("#search_").click(function () {
+            let style = $("#search_style").data('style');
+            let content = $("#search_content").val();
+            window.location.href = 'search.html?style=' + style + '&content=' + content;
+        });
+    </script>
 </body>
 </html>

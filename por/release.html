@@ -143,88 +143,90 @@
 		<script src="js/tool/getSort.js"></script>
 		<script src="js/article.js"></script>
 		<script type="text/javascript">
-			$(function () {
-				$(".pagination li").click(function () {
-		            let lix = $(this).index();
-		            $("#release > div").eq(lix).show().siblings("div").hide();
-                    $(this).addClass('active').siblings('li').removeClass('active');
-		        });
+            $(".pagination li").click(function () {
+                let lix = $(this).index();
+                $("#release > div").eq(lix).show().siblings("div").hide();
+                $(this).addClass('active').siblings('li').removeClass('active');
+            });
 
-				//进去发布页面
-                $("#wz").click(function () {
-                    $("#release").hide();
-                    $("#add_wz").show();
-                    $("#pt").show();
-                });
-                $("#sp").click(function () {
-                    $("#release").hide();
-                    $("#add_sp").show();
-                    $("#zs").show();
-                    $("#xq").show();
-                });
-                //返回已发布的界面
-				$("#back").click(function () {
-                    $("#release").show();
-                    $("#add_sp").hide();
-                    $("#sp-name").val("");
-                    $("#sp-price").val("");
-                    $("#format").val("");
-                    $("#sort").text("请选择分类");
-                    $("#bj_sp").remove();
-                    $("#as").show();
+            //进去发布页面
+            $("#wz").click(function () {
+                $("#release").hide();
+                $("#add_wz").show();
+                $("#pt").show();
+            });
+            $("#sp").click(function () {
+                $("#release").hide();
+                $("#add_sp").show();
+                $("#zs").show();
+                $("#xq").show();
+            });
+            //返回已发布的界面
+            $("#back").click(function () {
+                let myId = window.localStorage.getItem('myId');
 
-                    tdelete($("tbody"));
-                    initShop();
-                    initArticle();
-                });
-                $("#back-wz").click(function () {
-                    $("#release").show();
-                    $("#add_wz").hide();
-                    $("#wz-name").val("");
-                    $("#wz-article").val("");
-                    $("#bj_wz").remove();
-                    $("#aw").show();
+                $("#release").show();
+                $("#add_sp").hide();
+                $("#sp-name").val("");
+                $("#sp-price").val("");
+                $("#format").val("");
+                $("#sort").text("请选择分类");
+                $("#bj_sp").remove();
+                $("#as").show();
 
-                    initShop();
-                    initArticle();
-                });
+                tdelete($("tbody"));
+                initShop(myId);
+                initArticle(myId);
+            });
+            $("#back-wz").click(function () {
+				let myId = window.localStorage.getItem('myId');
 
-                // 编辑界面的设置
-                $(".container").delegate("#bj_wz", "click", function () {
-                    wz_name = $("#wz-name").val();
-                    article = $("#wz-article").val();
-                    $(".caption h4").text(wz_name);
-                    $(".caption p").text(article);
-                    this.remove();
-                    $("#as").show();
-                    $("#back-wz").trigger("click");
-                    $("#wz-name").val("");
-                    $("#wz-article").val("")
-                });
+                $("#release").show();
+                $("#add_wz").hide();
+                $("#wz-name").val("");
+                $("#wz-article").val("");
+                $("#bj_wz").remove();
+                $("#aw").show();
 
-                // 当属性输入框获得焦点时，动态创建下一行列表
-                $(".table").delegate('#parameter_name', 'focus', function () {
-                    if ($(this).parents('tr').next('tr').length <= 0){
-                        $(this).parents("tr").after("<tr>\n" +
-                            "                  <td><input id=\"parameter_name\" type=\"text\" placeholder='请输入'></td>\n" +
-                            "                  <td><input type=\"text\"></td>\n" +
-                            "                </tr>");
-                    }
-                });
+                initShop(myId);
+                initArticle(myId);
+            });
 
-                $("#sort").click(function () {
-                    $("#sort-menu").fadeIn();
-                });
-                $("#sort-menu").delegate('.sort-li', 'click', function () {
-                    if ($(this).data('name') === 'sun-menu'){
-                        $(this).children('ul').fadeIn();
-                    } else {
-                        let sortText = $(this).children('button').text();
-                        $("#sort").text(sortText);
-                        $("#sort-menu").fadeOut();
-                    }
-                    $(this).siblings('li').children('ul').fadeOut();
-                });
+            // 编辑界面的设置
+            $(".container").delegate("#bj_wz", "click", function () {
+                wz_name = $("#wz-name").val();
+                article = $("#wz-article").val();
+                $(".caption h4").text(wz_name);
+                $(".caption p").text(article);
+                this.remove();
+                $("#as").show();
+                $("#back-wz").trigger("click");
+                $("#wz-name").val("");
+                $("#wz-article").val("")
+            });
+
+            // 当属性输入框获得焦点时，动态创建下一行列表
+            $(".table").delegate('#parameter_name', 'focus', function () {
+                if ($(this).parents('tr').next('tr').length <= 0){
+                    $(this).parents("tr").after("<tr>\n" +
+                        "                  <td><input id=\"parameter_name\" type=\"text\" placeholder='请输入'></td>\n" +
+                        "                  <td><input type=\"text\"></td>\n" +
+                        "                </tr>");
+                }
+            });
+
+            $("#sort").click(function () {
+                $("#sort-menu").fadeIn();
+            });
+            $("#sort-menu").delegate('.sort-li', 'click', function () {
+                if ($(this).data('name') === 'sun-menu'){
+                    $(this).children('ul').fadeIn();
+                } else {
+                    let sortText = $(this).children('button').text();
+                    $("#sort").text(sortText);
+                    $("#sort-menu").fadeOut();
+                }
+                $(this).siblings('li').children('ul').fadeOut();
             });
 		</script>
 	</body>

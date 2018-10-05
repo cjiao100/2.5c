@@ -1,10 +1,5 @@
 $(function () {
-     /*if (!cache.on('index')){
-         cache.set('index', $('html'));
-     } else {
-         $(document).append(cache.get('index'));
-     }*/
-    let h = screen.height-100 + "px";
+	let h = screen.height-100 + "px";
     $(".fenlei > div, #right").css({
         height: h
     });
@@ -13,7 +8,7 @@ $(function () {
         let y = $(window).height()-50;
         $("#b").css("height", y);
         $(".search").fadeIn("100");
-        $("#search").trigger("click").focus();
+        $("#search_content").trigger("click").focus();
     });
     $("#b").click(function () {
         $(".search").fadeOut("100");
@@ -61,4 +56,4 @@ $("#search_").click(function () {
     let style = $("#search_style").data('style');
     let content = $("#search_content").val();
     window.location.href = 'search.html?style=' + style + '&content=' + content;
-})
+});

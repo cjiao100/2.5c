@@ -1,7 +1,10 @@
    const  URL = "http://192.168.199.179:8081";
 
    const  SocketURL = "ws://192.168.199.179:8081";
-//const  URL = "http://10.10.15.2:8081";
+   
+   const ID = window.localStorage.getItem('myId');
+
+   //const  URL = "http://10.10.15.2:8081";
 
 $(function () {
     let width = window.screen.width;

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/bootstrap.css">
+    <link rel="stylesheet" href="css/tool/nav.css">
     <link rel="stylesheet" href="css/friends-index.css">
 </head>
 <body>
@@ -30,12 +31,23 @@
             <p class="small col-xs-5"> 他的发表：<span>3</span></p>
         </div>
     </div>
-    <div class="zjk">
-        <div class="col-xs-4"><a href="./details_sc.html?pg=gz">关注</a></div>
-        <div class="col-xs-4"><a href="./details_sc.html?pg=bb">收藏</a></div>
-        <div class="col-xs-4"><a href="./details_sc.html?pg=wz">最近浏览</a></div>
+    <div class="navbar bg-warning" role="navigation">
+        <div aria-label="Page navigation" class="fy">
+            <ul class="pagination">
+                <li class="col-xs-6"><a href="#">taの文章</a></li>
+                <li class="col-xs-6"><a href="#">taの商品</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="navbar navbar-fixed-bottom row" role="navigation">
+    <div id="post">
+        <div id="myWz" class="container"></div>
+    </div>
+    <div id="shop">
+        <div id="mySp" class="container"></div>
+    </div>
+
+
+    <div class="navbar-fixed-bottom row" role="navigation">
         <button class="btn btn-primary col-xs-5">加好友</button>
         <div class="col-xs-2"></div>
         <button id="send" class="btn btn-primary col-xs-5">发消息</button>
@@ -54,34 +66,7 @@
 <script src="dist/jquery-3.3.1.js"></script>
 <script src="dist/bootstrap.js"></script>
 <script type="text/javascript" src="js/tool/por.js"></script>
-<script>
-    $(function () {
-        $("#open").click(function () {
-            $("#other").modal("toggle");
-        });
-        $("#send").click(function () {
-            let userId;
-            addChat(userId);
-
-        });
-        $("#back").click(function () {
-            window.history.back();
-        });
-        
-    });
-    
-    function addChat(receiverId) {
-        $.ajax({
-            url: URL + '/chat/add/' + receiverId,
-            type: 'post',
-            xhrFields: {
-                withCredentials:true
-            },
-            success: function (xhr) {
-                window.location.href = "chat.html?chatId=" + xhr.data;
-            }
-        });
-    }
-</script>
+<script type="text/javascript" src="js/tool/getUserList.js"></script>
+<script type="text/javascript" src="js/friendIndex.js"></script>
 </body>
 </html>

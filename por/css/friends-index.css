@@ -6,6 +6,7 @@ a:focus,input:focus,button:focus{
      outline: -webkit-focus-ring-color auto 0;
  }
 
+/*上半部分*/
 .jumbotron{
     background-color: rgba(233,155,149, 0.55);
     margin: 0;
@@ -25,17 +26,23 @@ a:focus,input:focus,button:focus{
     font-size: small;
     font-weight: 300;
 }
-.zjk{
-    margin-bottom: 8px;
-    text-align: center;
-    line-height: 40px;
+
+/*页面内标签页*/
+.navbar > .fy ul a{
+    background-color: rgba(252,248,227,0.67);
+    line-height: 3.5rem;
+    padding: 0;
+    color: #b99b9b;
+    font-size: 1.7rem;
+    font-weight: 600;
 }
-.zjk > div + div{
-    border-left: 1px solid #8c8c8c;
-}
+
+/*加好友或聊天*/
 .row{
     padding: 7px 40px;
 }
+
+/*好友设置*/
 .open-modal{
     position: absolute;
     top: 72.5%;
@@ -58,4 +65,16 @@ a:focus,input:focus,button:focus{
     -ms-transform: translate(0, -5%);
     -o-transform: translate(0, -5%);
     transform: translate(0, -5%);
+}
+.modal-dialog{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.modal-content{
+    position: absolute;
+    bottom: 0;
+    width: 95%;
 }

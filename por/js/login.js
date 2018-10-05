@@ -31,7 +31,8 @@ $(function () {
                console.log(xhr);
                if (xhr.success){
                    window.location.href = "index_index.html";
-               } else {
+                   window.localStorage.setItem('myId', xhr.data);
+			   } else {
                    $("#snackbar").text(xhr.message);
                    toast();
                }

@@ -164,12 +164,12 @@ function process_parameter(table){
 }
 
 //初始化商品发布页面
-function initShop() {
+function initShop(id) {
     $(".lump").remove();
 
     $.ajax({
         type: 'get',
-        url: URL+'/shop/myShop',
+        url: URL+'/shop/myShop/' + Id,
         xhrFields:{
             withCredentials:true
         },

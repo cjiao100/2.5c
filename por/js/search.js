@@ -3,6 +3,12 @@ $(function () {
     let style = $.getUrlParam('style');
     let $con = $(".container");
 
+    // console.log(content.length === 0);
+    if (content.length === 0){
+        $con.append('<p class="noResult">未找到相关商品</p>');
+        return false;
+    }
+
     console.log(style);
 
     switch (style) {
@@ -21,5 +27,7 @@ $(function () {
 });
 
 $(".container").delegate('#myFriendList > .list-group-item', 'click', function () {
-    $(this)
+	// console.log($(this).data('userid'));
+    let userID = $(this).data('userid');
+    window.location.href = 'friends-index.html?userId=' + userID;
 });
