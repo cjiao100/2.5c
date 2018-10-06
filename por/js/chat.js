@@ -2,7 +2,7 @@ $(function() {
 	let chatId = $.getUrlParam('chatId');
 	let acceptName = $.getUrlParam('acceptName');
 	let websocket = null;
-	let postInfoUrl = URL + '/post/' + chatId;
+	let postInfoUrl = SocketURL + '/one/realTime/chatId=' + chatId;
 	let currentInfoId = null;
 	let pageIndex = 1;
 	let pageSize = 10;
@@ -32,7 +32,7 @@ $(function() {
         //判断当前浏览器是否支持WebSocket
         if('WebSocket' in window){
             // 建立连接
-            websocket = new WebSocket("ws://192.168.199.179:8081/one/realTime/chatId=1");
+            websocket = new WebSocket(postInfoUrl)
         }
         else{
             alert('Not support websocket')

@@ -1,6 +1,8 @@
    const  URL = "http://192.168.199.179:8081";
+   // const  URL = "http://stxkfzx.xin:8081";
 
    const  SocketURL = "ws://192.168.199.179:8081";
+   // const  SocketURL = "ws://stxkfzx.xin:8081";
    
    const ID = window.localStorage.getItem('myId');
 

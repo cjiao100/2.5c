@@ -9,13 +9,11 @@ $(function () {
 	
 });
 
-
-
 $("#open").click(function () {
 	$("#other").modal("toggle");
 });
 $("#send").click(function () {
-	let userId;
+	let userId = $.getUrlParam('userId');
 	addChat(userId);
 	
 });
@@ -46,6 +44,8 @@ $("#addFriends").click(function () {
 /**************************AJAX***********************************/
 
 function addChat(receiverId) {
+	console.log(receiverId);
+	
 	$.ajax({
 		url: URL + '/chat/add/' + receiverId,
 		type: 'post',
@@ -53,6 +53,7 @@ function addChat(receiverId) {
 			withCredentials:true
 		},
 		success: function (xhr) {
+			console.log(xhr.data);
 			window.location.href = "chat.html?chatId=" + xhr.data;
 		}
 	});

@@ -45,7 +45,7 @@ function searchUser(content) {
         success: function (xhr) {
             console.log(xhr);
             if (xhr.success){
-                createUser(xhr.data);
+                createUser2(xhr.data);
             }
         }
     });
@@ -62,10 +62,10 @@ function getUserList(status, index) {
         success: function(xhr) {
             if (xhr.success) {
                 if (status === 0) {
-					console.log(xhr);
+					console.log(xhr.data);
                     createNewUser(xhr.data);
                 } else if (status === 1) {
-					console.log(xhr);
+					// console.log(xhr);
 					createUser(xhr.data);
                 }
             }
@@ -75,16 +75,29 @@ function getUserList(status, index) {
 
 // 搜索好友以及获取好友列表
 function createUser(friendList) {
-	console.log(friendList);
-	$.each(friendList, function (index, item) {
-		// console.log(item);
-        let friend = $('<li class="list-group-item" data-userid="'+ item.userId +'">\n' +
+	// console.log(friendList);
+	$.each(friendList.friendList, function (index, item) {
+		console.log(item);
+        let friend = $('<li class="list-group-item" data-userid="'+ item.userVO.userId +'">\n' +
             '            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
-            '            <span>'+ item.nickName +'</span>\n' +
+            '            <span>'+ item.userVO.nickName +'</span>\n' +
             '        </li>');
 
         $('#myFriendList').append(friend);
     });
+}
+// 搜索好友以及获取好友列表
+function createUser2(friendList) {
+	// console.log(friendList);
+	$.each(friendList, function (index, item) {
+		console.log(item);
+		let friend = $('<li class="list-group-item" data-userid="'+ item.userId +'">\n' +
+			'            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
+			'            <span>'+ item.nickName +'</span>\n' +
+			'        </li>');
+		
+		$('#myFriendList').append(friend);
+	});
 }
 // 获取新朋友列表
 function createNewUser(friendList) {
