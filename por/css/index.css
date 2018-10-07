@@ -89,7 +89,7 @@ a:focus,input:focus{
     float: left;
     width: 20%;
 }
-#str{
+/*#str{
     background-image: url("../img/index/shop.png");
     background-repeat: no-repeat;
     background-position: 110% 250%;
@@ -118,7 +118,7 @@ a:focus,input:focus{
     background-repeat: no-repeat;
     background-position: 45% 85%;
     background-size: 105px;
-}
+}*/
 
 /*回到顶部*/
 .page-one > .back-to-top{
