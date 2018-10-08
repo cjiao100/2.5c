@@ -229,7 +229,8 @@
 					"por/index_my.html",
 					"por/index_sort.html",
 					"por/index_chat.html",
-					"por/index_periphery.html"
+					"por/index_periphery.html",
+					"por/login.html"
 				],
 				"priority": 0
 			},

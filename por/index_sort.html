@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="dist/bootstrap.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/index/sort.css">
     <link rel="stylesheet" href="css/tool/fontSetting.css">
@@ -52,7 +52,9 @@
             <div class="col-sm-9 col-xs-9 xx-fenlei">
                 <div id="right" style="overflow: hidden;">
                     <div>
-                        <div id="right-list"></div>
+                        <div id="right-list">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -83,9 +85,9 @@
                     <span>商品</span><span class="caret"></span>
                 </button>
                 <ul id="search_sort" class="dropdown-menu">
-                    <li data-style="0"><a href="#">商品</a></li>
-                    <li data-style="1"><a href="#">文章</a></li>
-                    <li data-style="2"><a href="#">用户</a></li>
+                    <li data-style="0"><a  >商品</a></li>
+                    <li data-style="1"><a  >文章</a></li>
+                    <li data-style="2"><a  >用户</a></li>
                 </ul>
             </div><!-- /btn-group -->
             <input type="text" class="form-control" id="search_content" placeholder="search..">
@@ -95,8 +97,8 @@
         </div><!-- /input-group -->
         <div id="b"></div>
     </div>
-    <script src="dist/jquery-3.3.1.js"></script>
-    <script src="dist/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/tool/por.js"></script>
     <script src="js/tool/getShop.js"></script>
@@ -120,23 +122,17 @@
         for (let i in rs){
             let ry;
             let y;
-            let py;
             //避免遍历到自身创建的对象
             if(!rs.hasOwnProperty(i)) continue;
             rs[i].ontouchstart = function (e) {
                 ry = y?e.touches[0].pageY-y:e.touches[0].pageY;
             };
             rs[i].ontouchmove = function (e) {
-                // py = $("#other").offset().top;
-                console.log($("#other").offset().top);
                 y = e.touches[0].pageY - ry;
                 let index = rs[i].style.transform.indexOf('(');
                 let lastIndex = rs[i].style.transform.lastIndexOf('p');
                 let ty = parseInt(rs[i].style.transform.slice(index+1, lastIndex))-y;
                 if (y > 0 && ty < 0){
-                    rs[i].style.pointerEvents = 'none';
-                    return;
-                } else if (py <= 60 && ty > 0){
                     rs[i].style.pointerEvents = 'none';
                     return;
                 }
@@ -154,8 +150,6 @@
                 rs[i].style.pointerEvents = 'auto';
                 if (y >= 0){
                     rs[i].style.transform = "translateY(0px)";
-                } else if (py <= 60){
-                    rs[i].style.transform = "translateY(-1700px)";
                 }
             };
         }

@@ -44,7 +44,7 @@ function addLi(list) {
 function addUl(list, CategoryId, ul) {
     $(list).each(function (index, item) {
         if (item.parentId === CategoryId){
-            let li = $('<li class="childList-li"><a href="#" data-shopCategoryId="'+ item.shopCategoryId +'" onclick="listFade(this)">'+ item.categoryName +'</a></li>');
+            let li = $('<li class="childList-li"><a   data-shopCategoryId="'+ item.shopCategoryId +'" onclick="listFade(this)">'+ item.categoryName +'</a></li>');
             $(ul).append(li);
         }
     })

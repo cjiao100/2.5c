@@ -1,148 +1,150 @@
 {
-	"por/index.html": {
-		"refer": [
-			"por/details_sc.html",
-			"por/details_dd.html",
-			"por/details_sp.html",
-			"por/details_wz.html",
-			"por/friends_list.html"
-		],
-		"resources": []
-	},
-	"por/details_sc.html": {
-		"refer": [
-			"por/index.html",
-			"por/index_my.html"
-		],
-		"resources": []
-	},
-	"por/details_dd.html": {
-		"refer": [
-			"por/details_zf.html"
-		],
-		"resources": []
-	},
-	"por/details_zf.html": {
-		"refer": [
-			"por/index.html",
-			"por/details_sp.html",
-			"por/setting.html"
-		],
-		"resources": []
-	},
-	"por/details_sp.html": {
-		"refer": [
-			"por/details_zf.html",
-			"por/index_periphery.html"
-		],
-		"resources": []
-	},
-	"por/details_wz.html": {
-		"refer": [
-			"por/index.html",
-			"por/details_wz.html"
-		],
-		"resources": []
-	},
-	"por/friends_list.html": {
-		"refer": [
-			"por/friends-index.html",
-			"por/index_my.html"
-		],
-		"resources": []
-	},
-	"por/friends-index.html": {
-		"refer": [
-			"por/details_sc.html",
-			"por/friends_list.html"
-		],
-		"resources": []
-	},
-	"por/login.html": {
-		"refer": [
-			"por/register.html",
-			"por/index_index.html"
-		],
-		"resources": [
-			"por/img/login/未标题-1.png"
-		]
-	},
-	"por/register.html": {
-		"refer": [
-			"por/index.html",
-			"por/login.html"
-		],
-		"resources": []
-	},
-	"por/index_chat.html": {
-		"refer": [
-			"por/index_index.html",
-			"por/index_my.html",
-			"por/index_sort.html",
-			"por/index_periphery.html"
-		],
-		"resources": []
-	},
-	"por/index_index.html": {
-		"refer": [
-			"por/index_my.html",
-			"por/index_sort.html",
-			"por/index_chat.html",
-			"por/index_periphery.html"
-		],
-		"resources": []
-	},
-	"por/index_my.html": {
-		"refer": [
-			"por/index_chat.html",
-			"por/index_periphery.html",
-			"por/index_sort.html",
-			"por/details_sc.html",
-			"por/friends_list.html",
-			"por/index_index.html",
-			"por/release.html"
-		],
-		"resources": []
-	},
-	"por/index_periphery.html": {
-		"refer": [
-			"por/index_index.html",
-			"por/index_chat.html",
-			"por/index_my.html",
-			"por/index_sort.html",
-			"por/details_sp.html"
-		],
-		"resources": []
-	},
-	"por/index_sort.html": {
-		"refer": [
-			"por/index_periphery.html",
-			"por/index_index.html",
-			"por/index_chat.html",
-			"por/index_my.html",
-			"por/details_fl.html"
-		],
-		"resources": []
-	},
-	"por/setting.html": {
-		"refer": [
-			"por/details_zf.html"
-		],
-		"resources": []
-	},
-	"por/search.html": {
-		"resources": [
-			"por/img/yys.jpg",
-			"por/css/search.css",
-			"por/img/header.svg",
-			"por/css/fontSetting.css",
-			"por/dist/bootstrap.css"
-		],
-		"refer": []
-	},
-	"por/details_fl.html": {
-		"refer": [
-			"por/index_sort.html"
-		]
-	}
+  "por/index.html": {
+    "refer": [
+      "por/details_sc.html",
+      "por/details_dd.html",
+      "por/details_sp.html",
+      "por/details_wz.html",
+      "por/friends_list.html"
+    ],
+    "resources": []
+  },
+  "por/details_sc.html": {
+    "refer": [
+      "por/index.html",
+      "por/index_my.html"
+    ],
+    "resources": []
+  },
+  "por/details_dd.html": {
+    "refer": [
+      "por/details_zf.html"
+    ],
+    "resources": []
+  },
+  "por/details_zf.html": {
+    "refer": [
+      "por/index.html",
+      "por/details_sp.html",
+      "por/setting.html"
+    ],
+    "resources": []
+  },
+  "por/details_sp.html": {
+    "refer": [
+      "por/details_zf.html",
+      "por/index_periphery.html"
+    ],
+    "resources": []
+  },
+  "por/details_wz.html": {
+    "refer": [
+      "por/index.html",
+      "por/details_wz.html"
+    ],
+    "resources": []
+  },
+  "por/friends_list.html": {
+    "refer": [
+      "por/friends-index.html",
+      "por/index_my.html"
+    ],
+    "resources": []
+  },
+  "por/friends-index.html": {
+    "refer": [
+      "por/details_sc.html",
+      "por/friends_list.html"
+    ],
+    "resources": []
+  },
+  "por/login.html": {
+    "refer": [
+      "por/register.html",
+      "por/index_index.html"
+    ],
+    "resources": [
+      "por/img/login/*�-1.png"
+    ]
+  },
+  "por/register.html": {
+    "refer": [
+      "por/index.html",
+      "por/login.html"
+    ],
+    "resources": []
+  },
+  "por/index_chat.html": {
+    "refer": [
+      "por/index_index.html",
+      "por/index_my.html",
+      "por/index_sort.html",
+      "por/index_periphery.html"
+    ],
+    "resources": []
+  },
+  "por/index_index.html": {
+    "refer": [
+      "por/index_my.html",
+      "por/index_sort.html",
+      "por/index_chat.html",
+      "por/index_periphery.html",
+      "por/login.html"
+    ],
+    "resources": []
+  },
+  "por/index_my.html": {
+    "refer": [
+      "por/index_chat.html",
+      "por/index_periphery.html",
+      "por/index_sort.html",
+      "por/details_sc.html",
+      "por/friends_list.html",
+      "por/index_index.html",
+      "por/release.html"
+    ],
+    "resources": []
+  },
+  "por/index_periphery.html": {
+    "refer": [
+      "por/index_index.html",
+      "por/index_chat.html",
+      "por/index_my.html",
+      "por/index_sort.html",
+      "por/details_sp.html"
+    ],
+    "resources": []
+  },
+  "por/index_sort.html": {
+    "refer": [
+      "por/index_periphery.html",
+      "por/index_index.html",
+      "por/index_chat.html",
+      "por/index_my.html",
+      "por/details_fl.html"
+    ],
+    "resources": []
+  },
+  "por/setting.html": {
+    "refer": [
+      "por/details_zf.html"
+    ],
+    "resources": []
+  },
+  "por/search.html": {
+    "resources": [
+      "por/img/yys.jpg",
+      "por/css/search.css",
+      "por/img/header.svg",
+      "por/css/fontSetting.css",
+      "por/dist/bootstrap.css"
+    ],
+    "refer": []
+  },
+  "por/details_fl.html": {
+    "refer": [
+      "por/index_sort.html"
+    ],
+    "resources": []
+  }
 }
