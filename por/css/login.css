@@ -7,16 +7,18 @@ body{
     /*background: rgba(253,91,76, 1);*/
     /*background-image: url('../img/login/login_bj.png');*/
 	background: linear-gradient(130deg, #4a98cb, #f1a8d7 80%);
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;
     background-position: 0 0;
-    background-size: 100% 100%;
+    background-size: 100% 100%;*/
+	height: 100%;
 }
 
 .container > img{
 	width: 200px;
 	position: relative;
 	top: 3.5rem;
-	left: 7rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
 .group{
 	position: absolute;

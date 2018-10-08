@@ -56,7 +56,7 @@ body{
 }
 .pl-body{
     font-size: 14px;
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
 }
 .pl-body > li{
     position: relative;
@@ -74,23 +74,12 @@ body{
     white-space: nowrap;
     overflow: hidden;
     font-size: 12px;
-}
-.my-pl{
-    margin-top: 10px;
-    position: relative;
-}
-.my-pl input{
-    width: 78%;
-}
-.my-pl button{
-    position: absolute;
-    top: 0;
-    right: 0;
+    margin-top: 5px;
 }
 .ck_all{
     font-size: 12px;
 }
-.wz-footer form button{
+.wz-footer .navbar-left button{
     margin-top: 8px;
     margin-left: 8px;
     padding: 6px 30px 6px 12px;
@@ -99,57 +88,21 @@ body{
     background: rgba(180, 0, 15, 0.34);;
     color: white;
 }
-.wz-footer form button span{
+.wz-footer .navbar-left button span{
     font-size: 18px;
     position: absolute;
     top: 7px;
     left: 45px;
 }
-.wz-footer form button:nth-child(2) span{
+.wz-footer .navbar-left button:nth-child(2) span{
     left: 58px;
 }
-.wz-footer div{
+.wz-footer .navbar-right{
     margin-top: 13px;
 }
-.wz-footer div a{
+.wz-footer .navbar-right a{
     margin-right: 25px;
-}
-
-.comment-page{
-    display: none;
-    background-color: #eee;
-}
-.comment-neirong{
-    padding: 5px;
-    margin-bottom: 10px;
-    background-color: #fff;
-}
-.comment-neirong > p:nth-child(1){
-    font-size: 14px;
-}
-.comment-neirong > p:nth-child(2){
-    font-size: 10px;
-    color: #999;
-}
-.comment-neirong > p:nth-child(4){
-    height: 25px;
-    margin-bottom: 0;
-    padding: 3px;
-}
-.comment-neirong > p:nth-child(4) > span:nth-child(1){
-    font-size: 10px;
-    color: #999;
-    float: left;
-}
-.comment-neirong > p:nth-child(4) > span:nth-child(2){
-    font-size: 10px;
-    color: #999;
-    float: right;
-}
-.comment-neirong > p:nth-child(4) > span:nth-child(2) > button{
-    border: 1px solid #888;
-    background-color: #fff;
-    border-radius: 20px;
+    color: white;
 }
     
     

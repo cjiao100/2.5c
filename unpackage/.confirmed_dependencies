@@ -64,7 +64,7 @@
       "por/index_index.html"
     ],
     "resources": [
-      "por/img/login/*˜-1.png"
+      "por/img/login/*\u0007ý-1.png"
     ]
   },
   "por/register.html": {

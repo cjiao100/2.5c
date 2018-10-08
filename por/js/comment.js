@@ -8,7 +8,6 @@ function getComment(id, type) {
         },
         success: function (xhr) {
             if (xhr.success){
-                // console.log(xhr.data);
                 Comment(xhr.data)
             }
         },
@@ -21,13 +20,16 @@ function getComment(id, type) {
 function Comment(ComList) {
     $(ComList).each(function (index, Content) {
         // let time = Content.createTime;
+	
+		// console.log(Content);
 
         let comment = $('<div class="comment-neirong" data-commentId = "'+ Content.commentId +'">\n' +
-            '        <p><strong data-userId="'+ Content.user.userId +'">'+ Content.user.userName +'</strong></p>\n' +
+            '        <p><strong data-userId="'+ Content.user.userId +'">'+ Content.user.nickName +'</strong></p>\n' +
             '        <p>'+ new Date(Content.createTime).Format("yyyy-mm-dd") +'</p>\n' +
             '        <p>\n' + Content.commentContent +
             '        </p>\n' +
             '        <p>\n' +
+            '            <span id="click_more"></span>' +
             '            <span>\n' +
             '                    <button>评论</button>\n' +
             '                    <button data-likes="'+ Content.likes +'">点赞</button>\n' +
@@ -69,10 +71,11 @@ Date.prototype.Format = function(fmt) {
 
 };
 
-function addComment(belongId, type, parentId) {
-    let commentInfo = {
+function addComment(belongId, type, comment ,parentId) {
+	
+	let commentInfo = {
         belongId: belongId,
-        commentContent: '123',
+        commentContent: comment,
         type: type
     };
     $.ajax({
@@ -85,7 +88,7 @@ function addComment(belongId, type, parentId) {
             withCredentials:true
         },
         success: function (xhr) {
-            console.log(xhr);
+			getComment(belongId, type);
         }
     })
 }

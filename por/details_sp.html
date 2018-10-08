@@ -73,24 +73,6 @@
         <div id="size" class="other"></div>
         <div id="argument" class="other"></div>
     </div>
-    <!--评论页面-->
-    <div id="comment" class="comment-page">
-        <nav id="comment-nav" class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a id="back" class="navbar-brand">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                    </a>
-                    <a class="navbar-brand sp_img">
-                        <img>
-                    </a>
-                    <a class="navbar-brand pull-right"  >
-                        <span class="glyphicon glyphicon-shopping-cart"></span>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
     <!--立即购买，加入购物车，收藏商品-->
     <div class="sp_footer navbar-fixed-bottom">
         <a class="col-xs-2"><i class="iconfont icon-buoumaotubiao44"></i></a>
@@ -104,22 +86,10 @@
 <script src="js/tool/por.js"></script>
 <script src="js/tool/getUrl.js"></script>
 <script src="js/shopDetails.js"></script>
-<script src="js/comment.js"></script>
+<!--<script src="js/comment.js"></script>-->
 <script>
 	'use strict';
     $(function () {
-        // 监听更多评论的点击事件
-        $("#opencom").click(function () {
-            $("#comment").show();
-            $("#commodity").hide();
-            getComment($.getUrlParam('shopId'), 1);
-        });
-        // 监听评论页面的返回按钮的点击事件
-        $("#back").click(function () {
-            $("#commodity").show();
-            $("#comment").hide();
-            $(".comment-neirong").remove();
-        });
         // 监听其他页面的关闭按钮的点击事件
         $(".other").delegate("#close", "click", function () {
             $(".other").hide();
@@ -142,6 +112,8 @@
             window.history.back();
         })
     });
+
+
 </script>
 </body>
 </html>

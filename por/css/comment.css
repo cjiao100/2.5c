@@ -30,6 +30,21 @@ body{
     right: 50%;
     transform: translateX(50%);
 }
+.navbar-form{
+    border: none;
+    margin: 0;
+}
+.form-group{
+    width: 100%;
+}
+.form-group input{
+    border: 1px solid #ddd;
+    width: 100%;
+    border-radius: 8px;
+}
+input:active, input:focus{
+    outline: none;
+}
 
 /*每条评论的设置*/
 .comment-neirong{

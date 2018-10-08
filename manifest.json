@@ -3,7 +3,7 @@
     "id": "H52290950",/*应用的标识，创建应用时自动生成，勿手动修改*/
     "name": "login",/*应用名称，程序桌面图标名称*/
     "version": {
-        "name": "1.7.4",/*应用版本名称*/
+        "name": "1.8.0",/*应用版本名称*/
         "code": ""
     },
     "description": "",/*应用描述信息*/
@@ -88,11 +88,11 @@
                     }
                 },
                 "android": {
-                    "mdpi": "", /*普通屏程序图标，分辨率：48x48*/
-                    "ldpi": "", /*大屏程序图标，分辨率：48x48*/
-                    "hdpi": "", /*高分屏程序图标，分辨率：72x72*/
-                    "xhdpi": "",/*720P高分屏程序图标，分辨率：96x96*/
-                    "xxhdpi": ""/*1080P 高分屏程序图标，分辨率：144x144*/
+                    "mdpi": "C:/Users/cjw/Desktop/二次半LOGO.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi": "C:/Users/cjw/Desktop/二次半LOGO.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi": "C:/Users/cjw/Desktop/二次半LOGO.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi": "C:/Users/cjw/Desktop/二次半LOGO.png",/*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi": "C:/Users/cjw/Desktop/二次半LOGO.png","xxxhdpi":"C:/Users/cjw/Desktop/二次半LOGO.png"/*1080P 高分屏程序图标，分辨率：144x144*/
                 }
             },
             "splashscreen": {

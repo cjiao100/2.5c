@@ -8,78 +8,78 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/comment.css">
     <link rel="stylesheet" href="css/tool/fontSetting.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/tool/nav.css">
+    <link rel="stylesheet" href="css/tool/toast.css">
 </head>
 <body>
-<div class="child-comment">
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <ul class="pager navbar-left">
-                <li class="previous"><a id="back_all"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
-            </ul>
-            <h3 class="navbar-text navbar-title"><strong>评论详情</strong></h3>
+    <div class="child-comment">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <ul class="pager navbar-left">
+                    <li class="previous"><a id="back_all"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
+                </ul>
+                <h3 class="navbar-text navbar-title"><strong>评论详情</strong></h3>
+            </div>
+        </nav>
+        <div class="comment-neirong">
+            <p><strong>天下第一客</strong></p>
+            <p></p>
+            <p>
+                这东西是真的好，下回上新还来买
+                这东西是真的好，下回上新还来买
+                这东西是真的好，下回上新还来买
+                这东西是真的好，下回上新还来买
+            </p>
+            <p>
+                <span>2018-07-20</span>
+                <span>
+                        <button>评论</button>
+                        <button>点赞</button>
+                    </span>
+            </p>
         </div>
-    </nav>
-    <div class="comment-neirong">
-        <p><strong>天下第一客</strong></p>
-        <p></p>
-        <p>
-            这东西是真的好，下回上新还来买
-            这东西是真的好，下回上新还来买
-            这东西是真的好，下回上新还来买
-            这东西是真的好，下回上新还来买
-        </p>
-        <p>
-            <span>2018-07-20</span>
-            <span>
-                    <button>评论</button>
-                    <button>点赞</button>
-                </span>
-        </p>
-    </div>
-    <div class="comment container">
-        <div class="child-comment-content">
-            <img class="img-circle comment-user-img" src="img/header/h1.jpg">
-            <div class="comment-user-content">
-                <p class="small">
-                    <strong>评论的人</strong>
-                    <span class="glyphicon glyphicon-triangle-right"></span>
-                    <strong>被评论的人</strong>
-                </p>
-                <p class="small">评论的内容</p>
-                <p class="small action">
-                    <span>2018-07-20</span>
-                    <span class="pull-right">
+        <div class="comment container">
+            <div class="child-comment-content">
+                <img class="img-circle comment-user-img" src="img/header/h1.jpg">
+                <div class="comment-user-content">
+                    <p class="small">
+                        <strong>评论的人</strong>
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <strong>被评论的人</strong>
+                    </p>
+                    <p class="small">评论的内容</p>
+                    <p class="small action">
+                        <span>2018-07-20</span>
+                        <span class="pull-right">
                             <button>评论</button>
                             <button>点赞</button>
                         </span>
-                </p>
+                    </p>
+                </div>
+            </div>
+            <div class="child-comment-content">
+                <img class="img-circle comment-user-img" src="img/header/h1.jpg">
+                <div class="comment-user-content">
+                    <p class="small">
+                        <strong>评论的人</strong>
+                        <span class="glyphicon glyphicon-triangle-right"></span>
+                        <strong>被评论的人</strong>
+                    </p>
+                    <p class="small">评论的内容</p>
+                    <p class="small action">
+                        <span>2018-07-20</span>
+                        <span class="pull-right">
+                                <button>评论</button>
+                                <button>点赞</button>
+                            </span>
+                    </p>
+                </div>
             </div>
         </div>
-        <div class="child-comment-content">
-            <img class="img-circle comment-user-img" src="img/header/h1.jpg">
-            <div class="comment-user-content">
-                <p class="small">
-                    <strong>评论的人</strong>
-                    <span class="glyphicon glyphicon-triangle-right"></span>
-                    <strong>被评论的人</strong>
-                </p>
-                <p class="small">评论的内容</p>
-                <p class="small action">
-                    <span>2018-07-20</span>
-                    <span class="pull-right">
-                            <button>评论</button>
-                            <button>点赞</button>
-                        </span>
-                </p>
-            </div>
-        </div>
-
     </div>
-</div>
 
     <div id="all-comment">
-        <nav class="navbar navbar-fixed-top navbar-default">
+        <nav id="comment-nav" class="navbar navbar-fixed-top navbar-default">
             <div class="container-fluid">
                 <ul class="pager navbar-left">
                     <li class="previous"><a id="back"><span aria-hidden="true" class="glyphicon glyphicon-chevron-left"></span></a></li>
@@ -123,8 +123,31 @@
                 </p>
             </div>
         </div>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+            <div class="input-group">
+                <input id="content" type="text" class="form-control" placeholder="添加評論" aria-describedby="basic-addon2">
+                <span class="input-group-addon" id="addComment">發送</span>
+            </div>
+        </nav>
     </div>
+    <div id="snackbar"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/tool/por.js"></script>
+    <script src="js/tool/getUrl.js"></script>
+    <script src="js/tool/toast.js"></script>
+    <script src="js/comment.js"></script>
     <script>
+        $(function () {
+        	let type = $.getUrlParam('type');
+        	let belongId = $.getUrlParam('belongId');
+        	let inputCom = $('#addComment');
+			getComment(belongId, type);
+
+			/*if (type === '1'){
+				inputCom.attr('placeholder', '請購買后評論');
+				inputCom.attr('disabled', 'disabled');
+            }*/
+		});
         $("#click_more").click(function () {
             $('.child-comment').slideDown(500);
             $('#all-comment').fadeOut(100);
@@ -133,6 +156,21 @@
             $('.child-comment').slideUp(500);
             $('#all-comment').fadeIn(100);
         });
+        $("#back").click(function () {
+            window.history.back();
+		});
+        $('#addComment').click(function () {
+			let type = $.getUrlParam('type');
+			let belongId = $.getUrlParam('belongId');
+			let value = $('#content').val();
+
+			console.log(value);
+
+			if (value === ' ' || value === null){
+				return false;
+            }
+			addComment(belongId, type, value);
+		})
     </script>
 </body>
 </html>

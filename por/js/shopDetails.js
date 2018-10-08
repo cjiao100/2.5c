@@ -70,3 +70,7 @@ function shopDetails(shop) {
         }
     });
 }
+
+$('#opencom').click(function () {
+   window.location.href =  'comment.html?type=1&belongId=' + $.getUrlParam('shopId');
+});

@@ -11,13 +11,13 @@ function getUser(userId){
 		},
 		success: function (xhr) {
 			if (xhr.success) {
-				console.log(xhr.data);
+				// console.log(xhr.data);
 				user = xhr.data;
 			}
 		}
 	});
 	
-	console.log(user.nickName);
+	// console.log(user.nickName);
 	
 	return user;
 }

@@ -12,7 +12,9 @@ $(function () {
     });
     $("#b").click(function () {
         $(".search").fadeOut("100");
-    })
+    });
+	
+	$('#userName strong').text(getUser(ID).nickName);
 });
 
 $("#shopRow").delegate('.sp', 'click', function () {
