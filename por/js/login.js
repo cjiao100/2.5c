@@ -4,7 +4,7 @@
 //登录界面
 $(function () {
     $("#captcha_img").attr('src', URL+'/kaptcha?');
-    $('body').height(window.screen.height);
+    $('body').height(window.screen.height-25);
 
     // 点击登录时 获取登录手机号,密码以及验证码发送至后台
     $("#login").click(function () {

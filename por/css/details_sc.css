@@ -34,3 +34,15 @@ body{
     bottom: 6%;
     right: 6%;
 }
+
+.caption p:nth-child(1){
+    width: 75%;
+    display: inline-block;
+}
+.caption p:nth-child(2){
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    padding-left: 10px;
+    margin-bottom: 0;
+}
