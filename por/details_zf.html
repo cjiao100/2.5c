@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <p>XXX商品<small class="quantity">x1</small><strong class="small pull-right">￥ 20</strong></p>
+                    <p>XXX商品<small class="quantity">x1</small><strong id="price" class="small pull-right">￥ 20</strong></p>
                 </div>
             </div>
 
@@ -70,6 +70,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/tool/por.js"></script>
 <script>
 	'use strict';
     $(function () {
@@ -79,6 +80,7 @@
 
 		$("#total-price").text('￥ ' + shopMes.price);
 		$("#z-price").text('￥ ' + shopMes.price);
+		$("#price").text('￥ ' + shopMes.price);
 		$("#name strong").text(shopMes.name);
 
         $("#img").attr('href', shopMes.coverImg);

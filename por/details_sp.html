@@ -39,7 +39,7 @@
         </div>
         <!--商品基本介绍-->
         <div class="neirong">
-            <p id="price" class="text-danger"><stong></stong></p>
+            <p id="price" class="text-danger"><strong></strong></p>
             <p id="name"><strong></strong></p>
             <div class="table-responsive">
                 <table class="table">
@@ -105,7 +105,7 @@
         });
 
         $("#buy").click(function () {
-            let p = parseFloat($("#price").text().substr(1));
+            let p = parseFloat($("#price strong").text().substr(1));
 			let name = $("#name").text();
 			let coverImg = $('#coverImg').attr('href');
 
