@@ -51,13 +51,13 @@ function addUl(list, CategoryId, ul) {
 }
 /************************主页中的分类列表*******************************************/
 function indexUl(list) {
-	console.log(list);
+	// console.log(list);
     $(list).each(function (index, item) {
         if (item.shopCategoryId === 58){
             let ul = $('<ul class="list-group clearfix">\n' +
                 '                               <p class="sort-title" id="other">其他</p>\n' +
                 '                               <li class="sp list-group-item" data-shopCategoryId="58">\n' +
-                '                                   <img src="img/header.svg" alt="">\n' +
+                '                                   <img src="img/logo.png" alt="">\n' +
                 '                                   <p>其他</p>\n' +
                 '                               </li>\n' +
                 '                           </ul>');

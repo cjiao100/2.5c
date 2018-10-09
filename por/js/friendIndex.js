@@ -44,7 +44,7 @@ $("#addFriends").click(function () {
 /**************************AJAX***********************************/
 
 function addChat(receiverId) {
-	console.log(receiverId);
+	// console.log(receiverId);
 	
 	$.ajax({
 		url: URL + '/chat/add/' + receiverId,
@@ -53,7 +53,7 @@ function addChat(receiverId) {
 			withCredentials:true
 		},
 		success: function (xhr) {
-			console.log(xhr.data);
+			// console.log(xhr.data);
 			window.location.href = "chat.html?chatId=" + xhr.data;
 		}
 	});

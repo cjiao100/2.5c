@@ -1,17 +1,7 @@
 $(function () {
     let postId = $.getUrlParam('postId');
-    $.ajax({
-        type: 'get',
-        url: URL+'/post/'+postId,
-        xhrFields:{
-            withCredentials:true
-        },
-        success: function (xhr) {
-            if (xhr.success){
-                postDetails(xhr.data);
-            }
-        }
-    })
+	let postData = getOnePost(postId);
+	postDetails(postData);
 });
 
 function postDetails(post) {

@@ -24,7 +24,7 @@ $(".newFriends").click(function () {
 });
 
 $("#newFriendList").delegate('.button > button', 'click', function () {
-	console.log(this);
+	// console.log(this);
 	let friendId = $(this).parents('li').data('userid');
     let agree = $(this).data('select');
     
@@ -35,7 +35,7 @@ $("#newFriendList").delegate('.button > button', 'click', function () {
 			withCredentials:true
 		},
 		success: function (xhr) {
-			console.log(xhr);
+			// console.log(xhr);
 		}
     })
 });

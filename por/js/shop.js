@@ -36,10 +36,10 @@ $("#as").click(function () {
         shopInformationImageNum: j
     };
     sp_img.append('shopInfoStr', JSON.stringify(shopInfoStr));
-    console.log(sp_img.getAll('shopCoverImages'));
-    console.log(sp_img.getAll('shopInformationImages'));
-    console.log(i + ',' + j);
-    console.log(sp_img);
+    // console.log(sp_img.getAll('shopCoverImages'));
+    // console.log(sp_img.getAll('shopInformationImages'));
+    // console.log(i + ',' + j);
+    // console.log(sp_img);
     // 发送AJAX请求
     $.ajax({
         type: 'post',
@@ -52,14 +52,14 @@ $("#as").click(function () {
             withCredentials:true
         },
         success: function (xhr) {
-            console.log(xhr);
+            // console.log(xhr);
             if (xhr.success){
                 $("#back").trigger("click");
                 parameter = [];
             }
         },
         error: function (xhr) {
-            console.log(xhr);
+            // console.log(xhr);
         }
     });
 });
@@ -82,8 +82,8 @@ $(".container").delegate("#bj_sp", "click", function () {
         shopName: sp_name,
         shopSpecificationList: formatList
     };
-    console.log(modifyInfo);
-    console.log(shopId);
+    // console.log(modifyInfo);
+    // console.log(shopId);
     $.ajax({
         url: URL+'/shop/'+shopId,
         type: 'put',
@@ -214,7 +214,7 @@ function initMyShop(shopList) {
 function listFade(e) {
     let sortText = $(e).text();
     sort = $(e).attr('data-shopCategoryId');
-    console.log(sort);
+    // console.log(sort);
     $("#sort").text(sortText);
     $("#sort-menu").fadeOut();0
 }

@@ -26,35 +26,20 @@
         </div>
         <div aria-label="Page navigation" class="fy">
             <ul class="pagination">
-                <li class="col-xs-6 active" data-type="1"><a  >收到的评论</a></li>
-                <li class="col-xs-6" data-type="2"><a  >发出的评论</a></li>
+                <li class="col-xs-6 active" data-type="2"><a  >发出的评论</a></li>
+                <li class="col-xs-6" data-type="1"><a  >收到的评论</a></li>
             </ul>
         </div>
     </nav>
     <div id="get">
         <div class="comment">
             <div class="panel panel-default">
-                <div class="panel-heading"><p class="panel-title">这是一条评论</p></div>
+                <div class="panel-heading"><p class="panel-title">商品很不错</p></div>
                 <div class="panel-body panel-content">
-                    <p>《这里是被评论的文章/商品》</p>
-                    <p>这里是被评论的评论 </p>
+                    <p>《貂蝉仲夏夜之梦cosplay服装》</p>
                 </div>
                 <div class="panel-footer">
-                    <span>来自用户001的评论</span>
-                    <span>09-11</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="comment">
-            <div class="panel panel-default">
-                <div class="panel-heading"><p class="panel-title">这是一条评论</p></div>
-                <div class="panel-body panel-content">
-                    <p>《这里是被评论的文章/商品》</p>
-                    <p>这里是被评论的评论 </p>
-                </div>
-                <div class="panel-footer">
-                    <span>来自用户001的评论</span>
+                    <span>来自niv的评论</span>
                     <span>09-11</span>
                 </div>
             </div>
@@ -63,22 +48,10 @@
     <div id="put">
         <div class="comment">
             <div class="panel panel-default">
-                <div class="panel-heading"><p class="panel-title">这是一条评论</p></div>
+                <div class="panel-heading"><p class="panel-title">挺好的，值得购买</p></div>
                 <div class="panel-body panel-content">
-                    <p>《这里是被评论的文章/商品》</p>
-                    <p><span>被评论的用户：</span>这里是被评论的评论 </p>
-                </div>
-                <div class="panel-footer">
-                    <span>09-11</span>
-                </div>
-            </div>
-        </div>
-        <div class="comment">
-            <div class="panel panel-default">
-                <div class="panel-heading"><p class="panel-title">这是一条评论</p></div>
-                <div class="panel-body panel-content">
-                    <p>《这里是被评论的文章/商品》</p>
-                    <p><span>被评论的用户：</span>这里是被评论的评论 </p>
+                    <p>《貂蝉仲夏夜之梦cosplay服装》</p>
+                    <!--<p><span>被评论的用户：</span>这里是被评论的评论 </p>-->
                 </div>
                 <div class="panel-footer">
                     <span>09-11</span>
@@ -91,9 +64,32 @@
         <p class="tip">暂无更多数据</p>
     </div>
 
-    <script type="text/javascript" src="dist/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/tool/por.js"></script>
+    <script type="text/javascript" src="js/tool/getPost.js"></script>
+    <script type="text/javascript" src="js/tool/getShop.js"></script>
+    <script type="text/javascript" src="js/comment.js"></script>
     <script type="text/javascript">
+        $(function () {
+			getMyComment()
 
+            $('.pagination li').click(function () {
+				$(this).addClass('active').siblings('li').removeClass('active');
+				let type = $(this).data('type');
+
+				// console.log(type);
+
+				switch (type) {
+                    case 2:
+                    	$('#get').hide().siblings('#put').show();
+                    	break;
+                    case 1:
+						$('#get').show().siblings('#put').hide();
+						break;
+				}
+
+			})
+		})
     </script>
 </body>
 </html>

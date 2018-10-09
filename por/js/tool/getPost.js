@@ -43,3 +43,23 @@ function createPost(postList) {
         $('.body-block').append(postBlock);
     })
 }
+
+function getOnePost(postId) {
+    let data = {};
+    
+	$.ajax({
+		type: 'get',
+		url: URL+'/post/'+postId,
+		async: false,
+		xhrFields:{
+			withCredentials:true
+		},
+		success: function (xhr) {
+			if (xhr.success){
+				data = xhr.data;
+			}
+		}
+	});
+    
+    return data;
+}

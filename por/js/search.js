@@ -9,7 +9,7 @@ $(function () {
         return false;
     }
 
-    console.log(style);
+    // console.log(style);
 
     switch (style) {
         case '0':

@@ -31,11 +31,10 @@
             <div class="panel panel-default">
                 <div class="panel-heading media">
                     <div class="media-left media-middle">
-                        <img src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
+                        <img id="img" src="img/header.svg" alt="商品图片" class="media-object img-thumbnail">
                     </div>
                     <div class="media-body">
-                        <p class="media-heading"><strong>这是一个商品</strong></p>
-                        <p class="small">不存在的规格</p>
+                        <p id="name" class="media-heading"><strong>这是一个商品</strong></p>
                     </div>
                 </div>
                 <div class="panel-body">
@@ -74,38 +73,42 @@
 <script>
 	'use strict';
     $(function () {
-        $("#pay").click(function () {
-            $(".zzzf").show();
-            $(".qudd").hide();
-            setTimeout(function () {
-                $("#success").modal("toggle");
-            }, 5000);
-        });
-        let u = window.location.search.substr(1);
-        $("#total-price").text('￥ ' + u);
-        $("#z-price").text('￥ ' + u);
-        $("#bleak").click(function () {
-            window.location.href = 'index_index.html';
-        });
+        let shopMes = JSON.parse(localStorage.getItem('shop'));
+		let ads = JSON.parse(localStorage.getItem('ads'));
 
-        $("#back").click(function () {
-           window.history.back();
-        });
-        $(".address").click(function () {
-            window.location.href = 'setting.html?pg=sh';
 
-        });
-        let ads = JSON.parse(localStorage.getItem('ads'));
-        // console.log(ads);
+		$("#total-price").text('￥ ' + shopMes.price);
+		$("#z-price").text('￥ ' + shopMes.price);
+		$("#name strong").text(shopMes.name);
+
+        $("#img").attr('href', shopMes.coverImg);
+
         if (ads){
             $(".address").children("#temp").remove();
             $('<p><strong><span id="name">'+ ads['name'] +'</span><span id="phone" class="small">'+ ads['phone'] +'</span></strong></p>\n' +
                 '                <p class="small">'+ ads['address'] +'</p>').appendTo(".address");
         }
-
-
-
     });
+
+	$("#pay").click(function () {
+		$(".zzzf").show();
+		$(".qudd").hide();
+		setTimeout(function () {
+			$("#success").modal("toggle");
+		}, 5000);
+	});
+
+	$(".address").click(function () {
+		window.location.href = 'setting.html?pg=sh';
+	});
+
+	$("#back").click(function () {
+		window.history.back();
+	});
+
+	$("#bleak").click(function () {
+		window.location.href = 'index_index.html';
+	});
 </script>
 </body>
 </html>

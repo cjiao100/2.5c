@@ -19,7 +19,7 @@ $(function() {
 			postValue.message = msg;
 			websocket.send(JSON.stringify(postValue));
 		} else {
-            console.log("未輸入消息");
+            // console.log("未輸入消息");
         }
 		$("#chat").val('');
 	});
@@ -27,7 +27,7 @@ $(function() {
 	$('#acceptName').text(acceptName);
 
 	function connectWebSocket() {
-		console.log("开始建立socket连接....");
+		// console.log("开始建立socket连接....");
 
         //判断当前浏览器是否支持WebSocket
         if('WebSocket' in window){
@@ -41,19 +41,19 @@ $(function() {
 
 
 		websocket.onopen = function() {
-			console.log("连接成功");
+			// console.log("连接成功");
             // Time(chatId, JOIN);
 			beforeMessage();
             // console.log(html);
         };
 
 		websocket.onclose = function() {
-			console.log("关闭连接");
+			// console.log("关闭连接");
 			// Time(chatId, CLOSE);
 		};
 
 		websocket.onmessage = function(msg) {
-			console.log(msg.data);
+			// console.log(msg.data);
 			let info = JSON.parse(msg.data);
 			//				console.log(info.success);
 			//				console.log(info.message);
@@ -118,7 +118,7 @@ $(function() {
                 withCredentials:true
             },
 			success: function(xhr) {
-				console.log(xhr);
+				// console.log(xhr);
 				if (xhr.success) {
 				    if (xhr.data.messageList.length !== 0) {
                         pageIndex ++;

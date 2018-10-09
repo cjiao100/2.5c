@@ -36,7 +36,7 @@ function getShop(index, size, shopName, shopCategoryId, num) {
 
 // 周边页面的
 function createShop(shopList) {
-    console.log(shopList);
+    // console.log(shopList);
     $(shopList).each(function (index, shop) {
         // console.log(shopList[index].shopImageList[0].imageAddr);
         let shopBlock = $('<div class="sp col-xs-5" data-shopId="'+ shop.shopId +'">\n' +
@@ -46,7 +46,7 @@ function createShop(shopList) {
             '                        <span>￥'+ shop.price +'</span>\n' +
             '                    </div>\n' +
             '                </div>');
-        console.log('1');
+        // console.log('1');
         $("#shopRow").append(shopBlock);
     })
 }
@@ -75,4 +75,23 @@ function createIndexShop(ShopList) {
             '                </div>');
         $(".slide-box").append(shopBlock);
     })
+}
+
+function getOneShop(shopId) {
+    let data = {};
+	$.ajax({
+		type: 'get',
+		url: URL+'/shop/'+shopId,
+		async: false,
+		xhrFields:{
+			withCredentials:true
+		},
+		success: function (xhr) {
+			if (xhr.success){
+				data = xhr.data;
+			}
+		}
+	});
+	
+	return data;
 }

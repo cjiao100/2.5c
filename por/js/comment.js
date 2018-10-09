@@ -71,6 +71,7 @@ Date.prototype.Format = function(fmt) {
 
 };
 
+// 添加评论
 function addComment(belongId, type, comment ,parentId) {
 	
 	let commentInfo = {
@@ -91,4 +92,59 @@ function addComment(belongId, type, comment ,parentId) {
 			getComment(belongId, type);
         }
     })
+}
+
+// 获取自己的评论
+function getMyComment() {
+    $.ajax({
+        url: URL + '/comment/myComment',
+        type: 'get',
+		contentType: "application/json",
+		dataType: "json",
+		xhrFields:{
+			withCredentials:true
+		},
+        success: function (xhr) {
+			// console.log(xhr);
+			if (xhr.success){
+                createMyComment(xhr.data);
+            }
+		}
+    })
+}
+
+// new Date(Content.createTime).Format("yyyy-mm-dd")
+
+function createMyComment(MyCommentList) {
+    $.each(MyCommentList, function (index, item) {
+        let type = item.type;
+        let belongId = item.belongId;
+        let data = {};
+        
+        if (type === 1){
+			data = getOneShop(belongId);
+        } else if (type === 2) {
+			data = getOnePost(belongId);
+        } else {
+            return false;
+        }
+	
+		// console.log(data);
+  
+	
+		let myComment = $('<div class="comment" data-comment="2">\n' +
+			'            <div class="panel panel-default">\n' +
+			'                <div class="panel-heading"><p class="panel-title">'+ item.commentContent +'</p></div>\n' +
+			'                <div class="panel-body panel-content">\n' +
+			'                    <p>《'+ data.postTitle +'》</p>\n' +
+			'                    <p></p>\n' +
+			'                </div>\n' +
+			'                <div class="panel-footer">\n' +
+			'                    <span>'+ new Date(item.createTime).Format("yyyy-mm-dd") +'</span>\n' +
+			'                </div>\n' +
+			'            </div>\n' +
+			'        </div>');
+		
+		$("#put").prepend(myComment);
+	})
 }

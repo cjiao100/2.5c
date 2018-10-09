@@ -1,33 +1,23 @@
 $(function () {
 
     let shopId = $.getUrlParam('shopId');
-    $.ajax({
-        type: 'get',
-        url: URL+'/shop/'+shopId,
-        xhrFields:{
-            withCredentials:true
-        },
-        success: function (xhr) {
-            if (xhr.success){
-                shopDetails(xhr.data);
-            }
-        }
-    });
+	let shopData = getOneShop(shopId);
+	shopDetails(shopData);
 });
 
 function shopDetails(shop) {
-    $("#price").text('￥'+shop.price);
+    $("#price strong").text('￥'+shop.price);
     $("#name").text(shop.shopName);
     $.each(shop.shopImageList, function (index, shopImg) {
         if (shopImg.type === 0){
-            $('#informationimg').append('<img style="width: 100%" src="'+ URL + shopImg.imageAddr +'">')
+            $('#informationimg').append('<img id="coverImg" style="width: 100%" src="'+ URL + shopImg.imageAddr +'">')
         } else if (shopImg.type === 1){
             $("#coverimg").append($('<div class="item">\n' +
                 '                    <img style="width: 100%" src="'+ URL + shopImg.imageAddr +'">\n' +
                 '                </div>'));
         }
     });
-    console.log(shop.shopImageList);
+    // console.log(shop.shopImageList);
     $(".item:first-child").addClass('active');
 
     let serve = $('<div id="nei">\n' +

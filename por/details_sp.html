@@ -85,6 +85,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/tool/por.js"></script>
 <script src="js/tool/getUrl.js"></script>
+<script src="js/tool/getShop.js"></script>
 <script src="js/shopDetails.js"></script>
 <!--<script src="js/comment.js"></script>-->
 <script>
@@ -105,7 +106,18 @@
 
         $("#buy").click(function () {
             let p = parseFloat($("#price").text().substr(1));
-            window.location.href="details_zf.html?" + p;
+			let name = $("#name").text();
+			let coverImg = $('#coverImg').attr('href');
+
+			let shopMes = {
+				price: p,
+                name: name,
+                coverImg: coverImg
+            };
+
+			window.localStorage.setItem('shop', JSON.stringify(shopMes));
+
+            window.location.href="details_zf.html";
         });
         
         $("#back_page").click(function () {

@@ -17,11 +17,11 @@ $(function () {
 $(".container").delegate("[name=del]", "click", function () {
     let type = $(this).parents(".container").attr("id");
     let lump = $(this).parents('.lump');
-    console.log(lump);
+    // console.log(lump);
     if (type === 'mySp'){
         let shopId = get_Id(this, '.lump');
         // let shopId = $(this).parents('.lump').data("id");
-        console.log(shopId);
+        // console.log(shopId);
         $.ajax({
             type: 'delete',
             url: URL+'/shop/'+shopId,

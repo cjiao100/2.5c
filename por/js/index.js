@@ -24,7 +24,7 @@ $("#shopRow").delegate('.sp', 'click', function () {
 });
 
 $("#right").delegate("li", 'click', function () {
-    console.log("1");
+    // console.log("1");
     let spname = $(this).children("p").text();
     let CategoryId = $(this).data('shopcategoryid');
     window.location.href = "details_fl.html?fl=" + spname+'&shopCategoryId=' + CategoryId;

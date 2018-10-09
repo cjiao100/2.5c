@@ -11,7 +11,7 @@ function getChatList() {
         },
         success: function (xhr) {
             if (xhr.success) {
-                console.log(xhr.data);
+                // console.log(xhr.data);
                 createChatList(xhr.data);
             }
         }

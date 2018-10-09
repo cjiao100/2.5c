@@ -43,7 +43,7 @@ function searchUser(content) {
             withCredentials: true
         },
         success: function (xhr) {
-            console.log(xhr);
+            // console.log(xhr);
             if (xhr.success){
                 createUser2(xhr.data);
             }
@@ -62,7 +62,7 @@ function getUserList(status, index) {
         success: function(xhr) {
             if (xhr.success) {
                 if (status === 0) {
-					console.log(xhr.data);
+					// console.log(xhr.data);
                     createNewUser(xhr.data);
                 } else if (status === 1) {
 					// console.log(xhr);
@@ -77,7 +77,7 @@ function getUserList(status, index) {
 function createUser(friendList) {
 	// console.log(friendList);
 	$.each(friendList.friendList, function (index, item) {
-		console.log(item);
+		// console.log(item);
         let friend = $('<li class="list-group-item" data-userid="'+ item.userVO.userId +'">\n' +
             '            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
             '            <span>'+ item.userVO.nickName +'</span>\n' +
@@ -90,7 +90,7 @@ function createUser(friendList) {
 function createUser2(friendList) {
 	// console.log(friendList);
 	$.each(friendList, function (index, item) {
-		console.log(item);
+		// console.log(item);
 		let friend = $('<li class="list-group-item" data-userid="'+ item.userId +'">\n' +
 			'            <img src="img/header/h3.jpg" class="img-circle" alt="">\n' +
 			'            <span>'+ item.nickName +'</span>\n' +
@@ -101,7 +101,7 @@ function createUser2(friendList) {
 }
 // 获取新朋友列表
 function createNewUser(friendList) {
-	console.log(friendList);
+	// console.log(friendList);
 	$.each(friendList.friendList, function (index, item) {
 		if (item.userVO.sender === 0){
 			let newfriend = $('<li class="list-group-item" data-userId="'+ item.userVO.userId +'">\n' +
